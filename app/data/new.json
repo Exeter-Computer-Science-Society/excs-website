@@ -1,0 +1,23 @@
+[
+	{
+		"name": "Hack South West",
+		"description": "Our inter-uni Hackathon. Compete with a team for a prize!",
+		"footnote": "Exeter . Bristol . Bath . Cardiff . Plymouth",
+		"image": "/images/hack-sw-og-bg.png",
+		"link": "/hack-south-west"
+	},
+	{
+		"name": "Feature Your Personal Project",
+		"description": "Raise awareness + get awarded for a project you are working on in your free time!",
+		"footnote": "",
+		"image": "/images/featured-project.png",
+		"link": "/featured-projects"
+	},
+	{
+		"name": "A Packed Calendar",
+		"description": "We are running lots of socials and academic events this year. Check them out!",
+		"footnote": "",
+		"image": "/images/mini-hackathon.png",
+		"link": "/featured-projects"
+	}
+]

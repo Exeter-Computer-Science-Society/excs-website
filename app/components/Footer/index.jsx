@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { FiExternalLink } from "react-icons/fi";
 
 
@@ -8,15 +9,15 @@ export function Footer() {
 				<div className="flex gap-1 justify-center items-center text-2xl">
 					<h1 className="text-strong_text">Spotted an issue?</h1>
 					<h1 className="text-light_text">Please</h1>
-					<h1 className="text-accent underline cursor-pointer hover:px-2 transition-all duration-200">Let us know</h1>
+					<Link href={"mailto:excs@groups.exeterguild.com"} target={"_blank"} className="text-accent underline cursor-pointer">Let us know</Link>
 					<h1 className="text-light_text">or</h1>
-					<h1 className="text-accent underline cursor-pointer hover:px-2 transition-all duration-200">fix it yourself</h1>
+					<Link href={"https://github.com/Exeter-Computer-Science-Society/excs-website-2"} target={"_blank"} className="text-accent underline cursor-pointer">fix it yourself</Link>
 					<h1 className="text-light_text">!</h1>
 
 				</div>
 
 				<div className="flex gap-1 justify-center items-center text-xl">
-					<h1 className="text-light_text flex gap-1 items-center justify-center">Website built using open source <span className="underline flex gap-1 justify-center items-center cursor-pointer hover:px-2 transition-all duration-200">NextJS<FiExternalLink className="text-light_text" /></span></h1>
+					<h1 className="text-light_text flex gap-1 items-center justify-center">Website built using open source <Link href={"https://nextjs.org/"} target={"_blank"} className="underline flex gap-1 justify-center items-center cursor-pointer">NextJS<FiExternalLink className="text-light_text" /></Link></h1>
 
 				</div>
 			</div>
