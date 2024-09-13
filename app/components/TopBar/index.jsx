@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 // icons
 import { FiExternalLink } from "react-icons/fi";
@@ -23,9 +24,9 @@ export function TopBar() {
 					<h1 className="text-light_text font-bold">Events</h1>
 				</div>
 
-				<div className="w-fit h-full p-4 rounded-lg border border-secondary bg-primary flex justify-center items-center hover:border-accent cursor-pointer transition-all duration-200">
+				<Link href={"https://my.exeterguild.com/groups/QRM97/computer-science-society/memberships"} target={"_blank"} className="w-fit h-full p-4 rounded-lg border border-secondary bg-primary flex justify-center items-center hover:border-accent cursor-pointer transition-all duration-200">
 					<h1 className="text-light_text font-bold flex justify-center items-center gap-2">Memberships<FiExternalLink /></h1>
-				</div>
+				</Link>
 			</div>
 		</div>
 	)

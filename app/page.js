@@ -40,8 +40,6 @@ export default function Home() {
 			</div>
 
 			<div className="pl-[var(--page-padding-left)] pr-[var(--page-padding-right)]">
-
-
 				<div className="flex flex-col gap-4">
 					{/* about */}
 					<div className="w-full h-fit p-8 bg-primary rounded-xl flex flex-col gap-2 border border-secondary">
@@ -89,7 +87,7 @@ export default function Home() {
 
 
 				{/* committee page */}
-				<div className="flex flex-col">
+				<div className="flex flex-col pt-72">
 					<div className="flex justify-between h-24">
 						<h1 className="text-3xl font-bold text-light_text flex"><IoMdArrowDropright className="text-accent" />Your committee</h1>
 						<h1 className="text-xl font-bold text-accent cursor-pointer">View ALL...</h1>
