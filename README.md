@@ -5,6 +5,10 @@
 - how easy is that?!
 - now for the fun bit, the explanations on operation below
 
+## How to run it
+- clone the code `git clone https://github.com/Exeter-Computer-Science-Society/excs-website-2.git`
+- go into the directory `cd excs-website-2`
+- run `npm run dev`
 
 ## Transition
 - here will be described steps to undertake for new committee's
