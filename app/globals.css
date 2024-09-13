@@ -3,15 +3,36 @@
 @tailwind utilities;
 
 :root {
-    --background: #ffffff;
-    --foreground: #171717;
+    --bg-colour: #141414;
+    --primary-colour: #1c1c1c;
+    --secondary-colour: #313131;
+    --accent-colour: #5efe00;
+
+    --text-strong-colour: #ffffff;
+    --text-middle-colour: #dbdbdb;
+    --text-light-colour: #aaaaaa;
+
+    --page-padding-left: 14%;
+    --page-padding-right: 14%;
+
+    --border-radius: 6px;
+
+    --spacing-small: 16px;
+    --spacing-medium: 28px;
+    --spacing-big: 40px;
+
+    --sans-font: 'Inter', sans-serif;
+    --mono-font: 'Roboto Mono', monospace;
+    /* --mono-font: monospace; */
+
+    --gradient-top: var(--primary-colour);
+    --gradient-bottom: #082f0c;
+
+    --gradient-bg: linear-gradient(var(--gradient-top), var(--gradient-bottom));
 }
 
 @media (prefers-color-scheme: dark) {
-    :root {
-        --background: #0a0a0a;
-        --foreground: #ededed;
-    }
+	/* when the user wants dark */
 }
 
 body {
