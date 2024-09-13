@@ -1,36 +1,39 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+ ## For the new committee
+- welcome to your website!
+- this is exciting! We have made it easy for you to transition your new committee roles into this super optimized system
+- with json files containing all the information you would like to publish, all you need to do is write json
+- how easy is that?!
+- now for the fun bit, the explanations on operation below
 
-## Getting Started
 
-First, run the development server:
+## Transition
+- here will be described steps to undertake for new committee's
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+#### Housekeeping
+- please remove all content from the {x} files and {y} files
+- please remove all images from {public/images/people} folder
+
+#### The committee
+- please add your committee photos to the {public/images/people} folder
+- please update the json file {} with your names, positions and image locations
+```
+add json example here
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+#### Events
+- here will be described how to publish an event to the website
+- please locate the json file {}
+- add the relevant event data in this format
+```
+add json example here
+```
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+#### Featured Projects
+- if you wish to include featured projects please update the {} file regularly
+- locate the json file {}
+- add the project in this format
+```
+add json format
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+#### Something else
