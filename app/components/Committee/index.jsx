@@ -10,8 +10,8 @@ import { IoLogoLinkedin } from "react-icons/io5";
 import { IoLink } from "react-icons/io5";
 
 
-export function Committee() {
-	return (
+export function Committee({detailed=false}) {
+	return !detailed ? (
 		<div className="grid grid-cols-[repeat(auto-fit,minmax(15rem,2fr))] gap-4 h-full w-full">
 			{
 				data.map((member, index) => {
@@ -31,6 +31,58 @@ export function Committee() {
 														link.type === "instagram" ? (
 															<a href={link.url} target="_blank">
 																<IoLogoInstagram size={24} />
+															</a>
+														) : link.type === "github" ? (
+															<a href={link.url} target="_blank">
+																<FiGithub size={24} />
+															</a>
+														) : link.type === "linkedin" ? (
+															<a href={link.url} target="_blank">
+																<IoLogoLinkedin size={24} />
+															</a>
+														) : link.type === "other" ? (
+															<a href={link.url} target="_blank">
+																<IoLink size={24} />
+															</a>
+														) : null
+													}
+												</div>
+											)
+										})
+									}
+								</div>
+							</div>
+						</div>
+					)
+				})	
+			}
+		</div>
+	) : (
+		<div className="grid grid-cols-[repeat(auto-fit,minmax(30rem,2fr))] gap-4 h-full w-full">
+			{
+				data.map((member, index) => {
+					return (
+						<div key={index} className="w-full h-full flex flex-col justify-between gap-4 p-8 rounded-lg bg-primary bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary from-0% to-secondary to-100%%">
+							<div className="flex gap-8">
+								<Image src={member.image} width={100} height={100} alt="user" className="rounded-xl border border-white"/>
+
+								<div className="flex flex-col gap-4">
+									<h1 className="text-white font-bold text-4xl">{member.position}</h1>
+									<h1 className="text-light_text text-2xl">{member.name}</h1>
+								</div>
+							</div>
+
+							<div className="w-full h-full flex flex-col gap-16 justify-between items-center text-light_text">
+								<h1 className="text-light_text text-xl">{member.description}</h1>
+								<div className="w-full flex justify-start gap-3 pt-3">
+									{
+										member.links.map((link, index) => {
+											return (
+												<div key={index}>
+													{
+														link.type === "instagram" ? (
+															<a href={link.url} target="_blank" >
+																<IoLogoInstagram size={24} className="rounded-2xl hover:bg-white"/>
 															</a>
 														) : link.type === "github" ? (
 															<a href={link.url} target="_blank">
