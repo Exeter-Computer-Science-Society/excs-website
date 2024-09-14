@@ -1,16 +1,29 @@
 [
 	{
-		"name": "",
-		"description": "",
-		"date": "",
-		"location": "",
-		"type": ""
+		"title": "event0",
+		"description": "asdfasjdflkjaskldj lkasjdflkjkl sadfkl askfdjkl jaskldfj jasdfkl ajsfjkl",
+		"date": "2024-09-13",
+		"time": "12:00 PM",
+		"location": "On Campus",
+		"location_link": "https://www.google.com/maps",
+		"tags": ["social", "academic"]
 	},
 	{
-		"name": "",
-		"description": "",
-		"date": "",
-		"location": "",
-		"type": ""
+		"title": "event1",
+		"description": "asdfasjdflkjaskldj lkasjdflkjkl sadfkl askfdjkl jaskldfj jasdfkl ajsfjkl",
+		"date": "2024-09-14",
+		"time": "12:00 PM",
+		"location": "On Campus",
+		"location_link": "https://www.google.com/maps",
+		"tags": ["social", "academic"]
+	},
+	{
+		"title": "event2",
+		"description": "asdfasjdflkjaskldj lkasjdflkjkl sadfkl askfdjkl jaskldfj jasdfkl ajsfjkl asdfkla sjf kasjf k jklasdjf lkjaklsf jlk klj alkjklsdjf dsfkj sadhfh3h ksadfi h3ij nkjs",
+		"date": "2024-09-15",
+		"time": "12:00 PM",
+		"location": "On Campus",
+		"location_link": "https://www.google.com/maps",
+		"tags": ["fun"]
 	}
 ]

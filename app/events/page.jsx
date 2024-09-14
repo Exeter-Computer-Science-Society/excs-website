@@ -1,7 +1,111 @@
+'use client'
+
+import Image from "next/image";
+import Link from "next/link";
+import { IoMdArrowDropright } from "react-icons/io";
+
+import data from "../data/events.json";
+import { useEffect, useState } from "react";
+
 export default function Events() {
-	return (
-		<div className="w-screen h-full pt-32">
+
+	const [upcoming, setUpcoming] = useState([]);
+	const [past, setPast] = useState([]);
+	const [toggle, setToggle] = useState(false);
+
+	/**
+	 * This use effect sorts the events by date into current and past
+	 */
+	useEffect(() => {
+
+		// show the events one day after as well for safekeeping
+		const upcomingEvents = data.filter(event => {
+			let eventDate = new Date(event.date)
+			eventDate.setDate(eventDate.getDate() + 1);
+			let now = new Date()
 			
+			return eventDate >= now
+		})
+
+		const pastEvents = data.filter(event => {
+			let eventDate = new Date(event.date)
+			eventDate.setDate(eventDate.getDate() + 1);
+			let now = new Date()
+			
+			return eventDate < now
+		})
+
+		console.log(upcomingEvents, pastEvents);
+
+		setUpcoming(upcomingEvents);
+		setPast(pastEvents);
+	}, [])
+
+
+	return (
+		<div className="w-screen h-full pt-32 pl-[var(--page-padding-left)] pr-[var(--page-padding-right)]">
+			{/* Heading */}
+			<div className="w-full h-screen flex justify-center items-center gap-20 pb-72">
+				<div className="w-1/2 flex flex-col gap-4">
+					<h1 className="text-white font-bold text-6xl flex gap-1"><IoMdArrowDropright className="text-accent" /> EXCS Social Events</h1>
+					<h1 className="text-light_text font-bold text-3xl">Take a look at our incredible social schedule for this year!</h1>
+				</div>
+
+				<div>
+					<Image src={"/images/easter-ball.png"} width={600} height={600} alt={"solo programming"} />
+				</div>
+			</div>
+
+			{/* calendar */}
+			<div className="w-full h-full">
+
+			</div>
+
+			{/* list of upcoming events */}
+			<div className="w-full h-full">
+				<h1 className="text-white font-bold text-6xl flex gap-1"><IoMdArrowDropright className="text-accent" /> Our {toggle ? "Upcoming" : "Past"} Events</h1>
+
+				<div className="flex gap-4 w-full justify-start items-center pt-12">
+					<div className="w-48 h-16 flex justify-center items-center border-2 border-light_text p-2 rounded-lg bg-primary hover:border-accent transition-all duration-200 cursor-pointer hover:text-accent text-light_text" onClick={() => setToggle(true)}>
+						<h1 className="text-inherit text-3xl font-bold">Upcoming</h1>
+					</div>
+
+					<div className="w-48 h-16 flex justify-center items-center border-2 border-light_text p-2 rounded-lg bg-primary hover:border-accent transition-all duration-200 cursor-pointer hover:text-accent text-light_text" onClick={() => setToggle(false)}>
+						<h1 className="text-inherit text-3xl font-bold">Past</h1>
+					</div>
+				</div>
+
+
+				<div className="w-full h-full flex flex-col gap-4 pt-6">
+					{
+						toggle ? (
+							upcoming.map((event, index) => {
+								return (
+									<div key={index} className="w-full h-fit p-8 bg-primary rounded-xl flex flex-col gap-2 border border-secondary">
+										<h1 className="text-accent text-6xl font-extrabold">{event.title}</h1>
+										<h1 className="text-light_text text-2xl font-bold">{event.date}</h1>
+										<h1 className="text-light_text text-2xl font-bold">{event.time}</h1>
+										<h1 className="text-light_text text-2xl pt-4 font-bold">{event.description}</h1>
+									</div>
+								)
+							})
+						) : (
+							past.map((event, index) => {
+								return (
+									<div key={index} className="w-full h-fit p-8 bg-primary rounded-xl flex flex-col gap-2 border border-secondary">
+										<h1 className="text-accent text-6xl font-extrabold">{event.title}</h1>
+										<h1 className="text-light_text text-2xl font-bold">{event.date}</h1>
+										<h1 className="text-light_text text-2xl font-bold">{event.time}</h1>
+										<h1 className="text-light_text text-2xl pt-4 font-bold">{event.description}</h1>
+									</div>
+								)
+							})
+						)
+					}
+
+
+				</div>
+			</div>
 		</div>
 	)
 }
