@@ -13,20 +13,14 @@ import data from "@/data/events.json";
 
 // hooks
 import { useEffect, useState } from "react";
-import dynamic from 'next/dynamic';
-
-
-// const Map = dynamic(() => import('@/components/Map'), {ssr: false,});
 
 export default function Events() {
 
-
-
+	// states
 	const [upcoming, setUpcoming] = useState([]);
 	const [past, setPast] = useState([]);
 	const [toggle, setToggle] = useState(true);
 	const [mapOpen, setMapOpen] = useState(false);
-
 
 	/**
 	 * This use effect sorts the events by date into current and past
@@ -105,7 +99,7 @@ export default function Events() {
 									</div>
 								) : (
 									<div className="w-full rounded-r-md bg-primary flex">
-										<Map longitude={upcoming[0].longitude} latitude={upcoming[0].latitude}/>
+										<Map longitude={upcoming[0].longitude} latitude={upcoming[0].latitude} />
 
 										<div className="flex flex-col justify-start items-center gap-4 p-8">
 											<button className="w-full h-16 text-nowrap p-4 rounded-lg border border-secondary bg-primary flex justify-center items-center hover:border-accent cursor-pointer transition-all duration-200" onClick={() => setMapOpen(false)}>
@@ -134,8 +128,10 @@ export default function Events() {
 			</div>
 
 			{/* calendar */}
-			<div className="w-full h-full">
+			<div className="w-full h-full pt-12">
+				<h1 className="text-white font-bold text-6xl flex gap-1"><IoMdArrowDropright className="text-accent" /> Our Calendar</h1>
 
+				{/* add calendar below */}
 			</div>
 
 			{/* list of upcoming events */}
@@ -160,8 +156,10 @@ export default function Events() {
 								return (
 									<div key={index} className="w-full h-fit p-8 bg-primary rounded-xl flex flex-col gap-2 border border-secondary">
 										<h1 className="text-accent text-6xl font-extrabold">{event.title}</h1>
-										<h1 className="text-light_text text-2xl font-bold">{event.date}</h1>
-										<h1 className="text-light_text text-2xl font-bold">{event.time}</h1>
+										<div className="flex gap-4">
+											<h1 className="text-light_text text-2xl font-bold">{event.date}</h1>
+											<h1 className="text-light_text text-2xl font-bold">{event.time}</h1>
+										</div>
 										<h1 className="text-light_text text-2xl pt-4 font-bold">{event.description}</h1>
 									</div>
 								)
@@ -171,16 +169,16 @@ export default function Events() {
 								return (
 									<div key={index} className="w-full h-fit p-8 bg-primary rounded-xl flex flex-col gap-2 border border-secondary">
 										<h1 className="text-accent text-6xl font-extrabold">{event.title}</h1>
-										<h1 className="text-light_text text-2xl font-bold">{event.date}</h1>
-										<h1 className="text-light_text text-2xl font-bold">{event.time}</h1>
+										<div className="flex gap-4">
+											<h1 className="text-light_text text-2xl font-bold">{event.date}</h1>
+											<h1 className="text-light_text text-2xl font-bold">{event.time}</h1>
+										</div>
 										<h1 className="text-light_text text-2xl pt-4 font-bold">{event.description}</h1>
 									</div>
 								)
 							})
 						)
 					}
-
-
 				</div>
 			</div>
 		</div>

@@ -4,14 +4,14 @@
 		"description": "With warm hearts we welcome our new committee for the 2024/25 academic year!",
 		"footnote": "",
 		"image": "",
-		"link": "/hack-south-west"
+		"link": "/committee"
 	},
 	{
 		"name": "Hack South West",
 		"description": "Our inter-uni Hackathon. Compete with a team for a prize!",
 		"footnote": "Exeter . Bristol . Bath . Cardiff . Plymouth",
 		"image": "/images/hack-sw-og-bg.png",
-		"link": "/hack-south-west"
+		"link": "https://hack-south-west.excs.uk"
 	},
 	{
 		"name": "Feature Your Personal Project",
@@ -25,6 +25,6 @@
 		"description": "We are running lots of socials and academic events this year. Check them out!",
 		"footnote": "",
 		"image": "/images/mini-hackathon.png",
-		"link": "/featured-projects"
+		"link": "/events"
 	}
 ]

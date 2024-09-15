@@ -1,5 +1,6 @@
 import Image from "next/image"
 import data from "../../data/new.json"
+import Link from "next/link"
 
 
 export function NewList() {
@@ -8,7 +9,7 @@ export function NewList() {
 			{
 				data.map((thing, index) => {
 					return (
-						<div key={index} className="flex justify-between bg-primary p-8 rounded-xl border border-secondary border-solid hover:border-accent cursor-pointer transition-all duration-200">
+						<Link href={thing.link} key={index} className="flex justify-between bg-primary p-8 rounded-xl border border-secondary border-solid hover:border-accent cursor-pointer transition-all duration-200">
 							<div className="flex justify-start">
 								<div className="h-full w-fit px-8">
 									<h1 className="text-6xl font-bold text-light_text">{index}.</h1>
@@ -29,7 +30,7 @@ export function NewList() {
 							<div>
 								<Image src={thing.image} width={600} height={600} alt="new thing" className="object-cover rounded-lg"/>
 							</div>
-						</div>
+						</Link>
 					)
 				})
 			}
