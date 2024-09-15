@@ -1,17 +1,32 @@
 'use client'
 
+// components
 import Image from "next/image";
 import Link from "next/link";
+import { Map } from "@/components/Map";
+
+// icons
 import { IoMdArrowDropright } from "react-icons/io";
 
-import data from "../data/events.json";
+// data
+import data from "@/data/events.json";
+
+// hooks
 import { useEffect, useState } from "react";
+import dynamic from 'next/dynamic';
+
+
+// const Map = dynamic(() => import('@/components/Map'), {ssr: false,});
 
 export default function Events() {
 
+
+
 	const [upcoming, setUpcoming] = useState([]);
 	const [past, setPast] = useState([]);
-	const [toggle, setToggle] = useState(false);
+	const [toggle, setToggle] = useState(true);
+	const [mapOpen, setMapOpen] = useState(false);
+
 
 	/**
 	 * This use effect sorts the events by date into current and past
@@ -23,7 +38,7 @@ export default function Events() {
 			let eventDate = new Date(event.date)
 			eventDate.setDate(eventDate.getDate() + 1);
 			let now = new Date()
-			
+
 			return eventDate >= now
 		})
 
@@ -31,7 +46,7 @@ export default function Events() {
 			let eventDate = new Date(event.date)
 			eventDate.setDate(eventDate.getDate() + 1);
 			let now = new Date()
-			
+
 			return eventDate < now
 		})
 
@@ -56,13 +71,75 @@ export default function Events() {
 				</div>
 			</div>
 
+			{/* next event */}
+			<div className=" min-h-9w-full h-full">
+				<h1 className="text-white font-bold text-6xl flex gap-1"><IoMdArrowDropright className="text-accent" /> Next Event</h1>
+				{
+					upcoming.length > 0 ? (
+						<div className="w-full h-fit flex justify-start  rounded-r-lg">
+							<div className="w-fit h-fit flex items-center">
+								<Image src={upcoming[0].image} width={1000} height={600} alt={"solo programming"} className="w-full h-full object-cover" />
+							</div>
+							{
+								!mapOpen ? (
+									<div className="w-full p-8 rounded-r-md flex flex-col gap-2 bg-primary justify-between">
+										<div className="w-full">
+											<h1 className="text-white text-6xl font-extrabold">{upcoming[0].title}</h1>
+											<div className="flex gap-2">
+												<h1 className="text-light_text text-2xl font-bold">{upcoming[0].date}</h1>
+												<h1 className="text-light_text text-2xl font-bold">{upcoming[0].time}</h1>
+											</div>
+
+											<h1 className="text-light_text text-2xl pt-4 font-bold">{upcoming[0].description}</h1>
+										</div>
+
+										<div className="w-full flex justify-end gap-4">
+											<button className="w-fit h-full p-4 rounded-lg border border-secondary bg-primary flex justify-center items-center hover:border-accent cursor-pointer transition-all duration-200" onClick={() => setMapOpen(true)}>
+												<h1 className="text-light_text font-bold flex justify-center items-center gap-2">Open Map</h1>
+											</button>
+
+											<Link href={upcoming[0].fixr} className="w-fit h-full p-4 rounded-lg border border-secondary bg-primary flex justify-center items-center hover:border-accent cursor-pointer transition-all duration-200">
+												<h1 className="text-light_text font-bold flex justify-center items-center gap-2">Buy Tickets</h1>
+											</Link>
+										</div>
+									</div>
+								) : (
+									<div className="w-full rounded-r-md bg-primary flex">
+										<Map longitude={upcoming[0].longitude} latitude={upcoming[0].latitude}/>
+
+										<div className="flex flex-col justify-start items-center gap-4 p-8">
+											<button className="w-full h-16 text-nowrap p-4 rounded-lg border border-secondary bg-primary flex justify-center items-center hover:border-accent cursor-pointer transition-all duration-200" onClick={() => setMapOpen(false)}>
+												<h1 className="text-light_text font-bold flex justify-center items-center gap-2">Close Map</h1>
+											</button>
+
+											<Link href={upcoming[0].location_link} className="w-full h-16 text-nowrap p-4 rounded-lg border border-secondary bg-primary flex justify-center items-center hover:border-accent cursor-pointer transition-all duration-200">
+												<h1 className="text-light_text font-bold flex justify-center items-center gap-2">Open Google</h1>
+											</Link>
+
+											<Link href={upcoming[0].fixr} className="w-full h-16 text-nowrap p-4 rounded-lg border border-secondary bg-primary flex justify-center items-center hover:border-accent cursor-pointer transition-all duration-200">
+												<h1 className="text-light_text font-bold flex justify-center items-center gap-2">Buy Tickets</h1>
+											</Link>
+										</div>
+									</div>
+								)
+							}
+
+						</div>
+					) : (
+						<div className="w-full h-full p-8 bg-primary rounded-xl flex flex-col gap-2 border border-secondary">
+							<h1 className="text-accent text-6xl font-extrabold">No upcoming events</h1>
+						</div>
+					)
+				}
+			</div>
+
 			{/* calendar */}
 			<div className="w-full h-full">
 
 			</div>
 
 			{/* list of upcoming events */}
-			<div className="w-full h-full">
+			<div className="w-full h-full pt-12">
 				<h1 className="text-white font-bold text-6xl flex gap-1"><IoMdArrowDropright className="text-accent" /> Our {toggle ? "Upcoming" : "Past"} Events</h1>
 
 				<div className="flex gap-4 w-full justify-start items-center pt-12">

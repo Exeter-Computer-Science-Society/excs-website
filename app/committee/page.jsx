@@ -1,4 +1,4 @@
-import { Committee } from "../components/Committee";
+import { Committee } from "../../components/Committee";
 import { IoMdArrowDropright } from "react-icons/io";
 
 export default function CommitteePage() {

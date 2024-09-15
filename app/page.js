@@ -1,18 +1,16 @@
 'use client'
 
+// components
 import Image from "next/image";
-import { TopBar } from "./components/TopBar";
-import { Footer } from "./components/Footer";
-import { Committee } from "./components/Committee";
+import Link from "next/link";
+import { TopBar } from "@/components/TopBar";
+import { Footer } from "@/components/Footer";
+import { Committee } from "@/components/Committee";
+import { FlyingTriangles } from "@/components/FlyingTriangles";
+import { NewList } from "@/components/NewList";
 
 // icons
 import { IoMdArrowDropright } from "react-icons/io";
-import { FlyingTriangles } from "./components/FlyingTriangles";
-
-
-import Link from "next/link";
-import { NewList } from "./components/NewList";
-
 
 
 export default function Home() {

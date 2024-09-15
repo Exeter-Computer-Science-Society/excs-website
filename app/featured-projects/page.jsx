@@ -1,11 +1,18 @@
 'use client'
 
+// components
 import Image from "next/image";
 import Link from "next/link";
+
+// icons
 import { IoMdArrowDropright } from "react-icons/io";
 
-import winner from "../data/winning_project.json";
+// data
+import winner from "@/data/winning_project.json";
+
+// hooks
 import { useState } from "react";
+
 
 export default function FeaturedProjects() {
 

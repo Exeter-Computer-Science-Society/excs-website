@@ -2,28 +2,43 @@
 	{
 		"title": "event0",
 		"description": "asdfasjdflkjaskldj lkasjdflkjkl sadfkl askfdjkl jaskldfj jasdfkl ajsfjkl",
+		"image": "/images/easter-ball.png",
 		"date": "2024-09-13",
 		"time": "12:00 PM",
 		"location": "On Campus",
 		"location_link": "https://www.google.com/maps",
-		"tags": ["social", "academic"]
+		"fixr": "https://www.google.com/maps",
+		"link": "https://www.google.com/maps",
+		"tags": ["social", "academic"],
+		"longitude": -3.537125,
+		"latitude": 50.735930
 	},
 	{
 		"title": "event1",
 		"description": "asdfasjdflkjaskldj lkasjdflkjkl sadfkl askfdjkl jaskldfj jasdfkl ajsfjkl",
+		"image": "/images/easter-ball.png",
 		"date": "2024-09-14",
 		"time": "12:00 PM",
 		"location": "On Campus",
 		"location_link": "https://www.google.com/maps",
-		"tags": ["social", "academic"]
+		"fixr": "https://www.google.com/maps",
+		"link": "https://www.google.com/maps",
+		"tags": ["social", "academic"],
+		"longitude": -3.537125,
+		"latitude":  50.735930
 	},
 	{
 		"title": "event2",
 		"description": "asdfasjdflkjaskldj lkasjdflkjkl sadfkl askfdjkl jaskldfj jasdfkl ajsfjkl asdfkla sjf kasjf k jklasdjf lkjaklsf jlk klj alkjklsdjf dsfkj sadhfh3h ksadfi h3ij nkjs",
+		"image": "/images/easter-ball.png",
 		"date": "2024-09-15",
 		"time": "12:00 PM",
 		"location": "On Campus",
 		"location_link": "https://www.google.com/maps",
-		"tags": ["fun"]
+		"fixr": "https://www.google.com/maps",
+		"link": "https://www.google.com/maps",
+		"tags": ["fun"],
+		"longitude": -3.537125,
+		"latitude":  50.735930
 	}
 ]
