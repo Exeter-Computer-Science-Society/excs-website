@@ -1,0 +1,90 @@
+[
+	{
+		"name": "Ed Blewitt",
+		"position": "President",
+		"description": "Hi! Im very excited to be the 23/24 President of EXCS. We have an excellent committee this year and have lots of awesome new ideas that we are all very excited to bring to life! This year we will really focus on our core members studying Computer Science and do everything we can to enrich their experience at the University.",
+		"image": "/images/people/past/ed.jpeg",
+		"links": [
+			{
+				"type": "linkedin",
+				"url": "https://www.linkedin.com/in/edward-blewitt/"
+			},
+			{
+				"type": "github",
+				"url": "https://github.com/Littled2"
+			}
+		]
+	},
+	{
+		"name": "Joachim Tan",
+		"position": "Vice President",
+		"description": "Hi! Im looking forward to driving change within EXCS as the 23/24 Vice-President. Im sure the diversity of backgrounds and skillsets within our committee will push our society to greater heights this year. This year, we are looking to build a stronger computer science community and provide increased networking opportunities with companies. Feel free to reach out to me if you have any suggestions!",
+		"image": "/images/people/past/joachim.jpeg",
+		"links": [
+			{
+				"type": "linkedin",
+				"url": "https://www.linkedin.com/in/joachimstanislaus/"
+			},
+			{
+				"type": "github",
+				"url": "https://github.com/JoachimStanislaus"
+			}
+		]
+	},
+	{
+		"name": "Wiktor Wiejak",
+		"position": "Academic Officer",
+		"description": "I've always loved researching adventurous, fun projects whether computer science related or not. Being on committee I can run engaging off-course projects that tickle interest, exploration and creativity not only for myself but for others as well. Additionally to this, I can bring back the running of a large Hackathon which I have only ever heard of through word of mouth.",
+		"image": "/images/people/past/wiktor.jpeg",
+		"links": [
+			{
+				"type": "linkedin",
+				"url": "https://www.linkedin.com/in/wiktor-wiejak/"
+			},
+			{
+				"type": "github",
+				"url": "https://github.com/inspizzz"
+			}
+		]
+	},
+	{
+		"name": "Emily Linard",
+		"position": "Media Secretary",
+		"description": "I am a 2nd year computer science student with an interest in cyber security and digital forensics. I chose to be part of the committee to represent women in STEM while developing my skills and knowledge in graphic design along with social media management. I am passionate about feminism, especially within industry. My interests are also in Irish Dance, which I coach at university.",
+		"image": "/images/people/past/emily.png",
+		"links": [
+			{
+				"type": "linkedin",
+				"url": "https://www.linkedin.com/in/emily-linard-89251b234/"
+			}
+		]
+	},
+	{
+		"name": "Callum Young",
+		"position": "Treasurer",
+		"description": "I decided to become a member of the computer science committee because I wanted to help make our society more enjoyable for our members and I have many ideas on what we could do to improve our society which I would like to implement. I enjoy web development especially backend development, application development in languages like C# and python, I also enjoy game development in game engines like unity.",
+		"image": "/images/people/past/callum.jpeg",
+		"links": [
+			{
+				"type": "linkedin",
+				"url": "https://www.linkedin.com/in/callum-young-6b14b228a/"
+			},
+			{
+				"type": "github",
+				"url": "https://github.com/Cufe12345"
+			}
+		]
+	},
+	{
+		"name": "James Thomas",
+		"position": "Social Secretary",
+		"description": "Being on committee puts me in a position of responsibility where I can actively change the situation of the society for my peers. By representing my peers it allows me to make changes and host events that are in our members best interest. There are many ways I can see growth for the society and by taking an active committee role I can play a part in making sure these changes come into fruition. Sometimes if you want something done you have to do it yourself!",
+		"image": "/images/people/past/james.jpg",
+		"links": [
+			{
+				"type": "linkedin",
+				"url": "https://www.linkedin.com/in/jamesthomas20/"
+			}
+		]
+	}
+]

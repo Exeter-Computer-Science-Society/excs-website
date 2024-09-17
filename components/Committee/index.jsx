@@ -1,7 +1,5 @@
 'use client'
 
-import { useEffect } from "react"
-import data from "../../data/committee.json"
 import Image from "next/image"
 
 import { IoLogoInstagram } from "react-icons/io5";
@@ -10,7 +8,7 @@ import { IoLogoLinkedin } from "react-icons/io5";
 import { IoLink } from "react-icons/io5";
 
 
-export function Committee({detailed=false}) {
+export function Committee({data, detailed=false}) {
 	return !detailed ? (
 		<div className="grid grid-cols-[repeat(auto-fit,minmax(15rem,2fr))] gap-4 h-full w-full">
 			{
@@ -29,19 +27,19 @@ export function Committee({detailed=false}) {
 												<div key={index}>
 													{
 														link.type === "instagram" ? (
-															<a href={link.url} target="_blank">
+															<a href={link.url} target="_blank" className="hover:text-white transition-all duration-200 cursor-pointer">
 																<IoLogoInstagram size={24} />
 															</a>
 														) : link.type === "github" ? (
-															<a href={link.url} target="_blank">
+															<a href={link.url} target="_blank" className="hover:text-white transition-all duration-200 cursor-pointer">
 																<FiGithub size={24} />
 															</a>
 														) : link.type === "linkedin" ? (
-															<a href={link.url} target="_blank">
+															<a href={link.url} target="_blank" className="hover:text-white transition-all duration-200 cursor-pointer">
 																<IoLogoLinkedin size={24} />
 															</a>
 														) : link.type === "other" ? (
-															<a href={link.url} target="_blank">
+															<a href={link.url} target="_blank" className="hover:text-white transition-all duration-200 cursor-pointer">
 																<IoLink size={24} />
 															</a>
 														) : null

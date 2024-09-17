@@ -1,74 +1,26 @@
 [
 	{
-		"name": "Wiktor Wiejak",
-		"position": "Hackathon Director",
-		"description": "Wiktor is a 3rd year Computer Science student at the University of Bristol. He is passionate about technology and innovation, and has been involved in the tech community for a few years now. He is excited to bring his experience to the Hackathon Director role and make this year's event the best one yet!",
-		"image": "/images/people/wiktor.jpeg",
-		"links": [
-			{
-				"type": "instagram",
-				"url": "https://www.instagram.com/wiktorwiejak/"
-			},
-			{
-				"type": "linkedin",
-				"url": "https://www.linkedin.com/in/wiktor-wiejak/"
-			},
-			{
-				"type": "github",
-				"url": "https://www.github.com/inspizzz"
-			}
-		]
-	},
-	{
-		"name": "Wiktor Wiejak",
-		"position": "Hackathon Director",
-		"description": "Wiktor is a 3rd year Computer Science student at the University of Bristol. He is passionate about technology and innovation, and has been involved in the tech community for a few years now. He is excited to bring his experience to the Hackathon Director role and make this year's event the best one yet!",
-		"image": "/images/people/wiktor.jpeg",
-		"links": [
-			{
-				"type": "instagram",
-				"url": "https://www.instagram.com/wiktorwiejak/"
-			},
-			{
-				"type": "linkedin",
-				"url": "https://www.linkedin.com/in/wiktor-wiejak/"
-			},
-			{
-				"type": "github",
-				"url": "https://www.github.com/inspizzz"
-			}
-		]
-	},
-	{
-		"name": "Wiktor Wiejak",
-		"position": "Hackathon Director",
-		"description": "Wiktor is a 3rd year Computer Science student at the University of Bristol. He is passionate about technology and innovation, and has been involved in the tech community for a few years now. He is excited to bring his experience to the Hackathon Director role and make this year's event the best one yet!",
-		"image": "/images/people/wiktor.jpeg",
-		"links": [
-			{
-				"type": "instagram",
-				"url": "https://www.instagram.com/wiktorwiejak/"
-			},
-			{
-				"type": "linkedin",
-				"url": "https://www.linkedin.com/in/wiktor-wiejak/"
-			},
-			{
-				"type": "github",
-				"url": "https://www.github.com/inspizzz"
-			}
-		]
-	},
-	{
-		"name": "Wiktor Wiejak",
-		"position": "Hackathon Director",
+		"name": "Tasbir Rahaman",
+		"position": "President",
 		"description": "",
-		"image": "/images/people/wiktor.jpeg",
+		"image": "/images/people/tasbir.jpeg",
 		"links": [
 			{
-				"type": "instagram",
-				"url": "https://www.instagram.com/wiktorwiejak/"
+				"type": "linkedin",
+				"url": "https://www.linkedin.com/in/tasbir-rahaman-a10252265/"
 			},
+			{
+				"type": "github",
+				"url": "https://github.com/tasbirr"
+			}
+		]
+	},
+	{
+		"name": "Wiktor Wiejak",
+		"position": "Hackathon Director",
+		"description": "Wiktor is a 3rd year Computer Science student at the University of Bristol. He is passionate about technology and innovation, and has been involved in the tech community for a few years now. He is excited to bring his experience to the Hackathon Director role and make this year's event the best one yet!",
+		"image": "/images/people/wiktor.jpeg",
+		"links": [
 			{
 				"type": "linkedin",
 				"url": "https://www.linkedin.com/in/wiktor-wiejak/"
@@ -80,62 +32,82 @@
 		]
 	},
 	{
-		"name": "Wiktor Wiejak",
-		"position": "Hackathon Director",
-		"description": "Wiktor is a 3rd year Computer Science student at the University of Bristol. He is passionate about technology aa few years now. He is excited to bring his experience to the Hackathon Director role and make this year's event the best one yet!",
-		"image": "/images/people/wiktor.jpeg",
+		"name": "Kechen Liu",
+		"position": "Vice President",
+		"description": "",
+		"image": "/images/people/kechen.jpeg",
 		"links": [
 			{
-				"type": "instagram",
-				"url": "https://www.instagram.com/wiktorwiejak/"
-			},
-			{
 				"type": "linkedin",
-				"url": "https://www.linkedin.com/in/wiktor-wiejak/"
+				"url": "https://www.linkedin.com/in/liu-kechen-3b1a2624b/"
 			},
 			{
 				"type": "github",
-				"url": "https://www.github.com/inspizzz"
+				"url": "https://github.com/kechenkristin"
 			}
 		]
 	},
 	{
-		"name": "Wiktor Wiejak",
-		"position": "Hackathon Director",
-		"description": "Wiktor is a 3rd year Computer Science student at the University of Bristol. H",
-		"image": "/images/people/wiktor.jpeg",
+		"name": "Nehir Yurtsever",
+		"position": "Academic Director",
+		"description": "",
+		"image": "/images/people/nehir.jpeg",
 		"links": [
 			{
-				"type": "instagram",
-				"url": "https://www.instagram.com/wiktorwiejak/"
-			},
-			{
 				"type": "linkedin",
-				"url": "https://www.linkedin.com/in/wiktor-wiejak/"
+				"url": "https://www.linkedin.com/in/nehir-yurtsever-2932a0233/"
 			},
 			{
 				"type": "github",
-				"url": "https://www.github.com/inspizzz"
+				"url": "https://www.github.com/"
 			}
 		]
 	},
 	{
-		"name": "Wiktor Wiejak",
-		"position": "Hackathon Director",
-		"description": "Wiktor is a 3rd year Computer Science student at the University of Bristol. He is passionate about technology and innovation, and has been involved in the tech community for a few years now. Herience to the Hackathon Director role and make this year's event the best one yet!",
-		"image": "/images/people/wiktor.jpeg",
+		"name": "Zeynep Guler",
+		"position": "Social Director",
+		"description": "",
+		"image": "/images/people/zeynep.jpeg",
 		"links": [
 			{
-				"type": "instagram",
-				"url": "https://www.instagram.com/wiktorwiejak/"
-			},
-			{
 				"type": "linkedin",
-				"url": "https://www.linkedin.com/in/wiktor-wiejak/"
+				"url": "https://www.linkedin.com/in/zeynep-g%C3%BCler2005/"
 			},
 			{
 				"type": "github",
-				"url": "https://www.github.com/inspizzz"
+				"url": "https://www.github.com/"
+			}
+		]
+	},
+	{
+		"name": "Cody Tam",
+		"position": "Treasurer",
+		"description": "",
+		"image": "/images/people/cody.jpeg",
+		"links": [
+			{
+				"type": "linkedin",
+				"url": "https://www.linkedin.com/in/cody-lokyitam/"
+			},
+			{
+				"type": "github",
+				"url": "https://www.github.com/"
+			}
+		]
+	},
+	{
+		"name": "Crystal Tsui",
+		"position": "Marketing Director",
+		"description": "",
+		"image": "/images/people/crystal.jpeg",
+		"links": [
+			{
+				"type": "linkedin",
+				"url": "https://www.linkedin.com/in/crystal-tsui-8997582a7/"
+			},
+			{
+				"type": "github",
+				"url": "https://www.github.com/"
 			}
 		]
 	}
