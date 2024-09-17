@@ -22,9 +22,9 @@ export default function Home() {
 
 				<FlyingTriangles />
 
-				<Link href={"https://www.exeter.ac.uk/"} className="w-fit h-fit border border-white flex gap-8 bg-primary justify-center items-center p-4 z-40 cursor-pointer hover:bg-secondary transition-all duration-200 rounded-lg">
+				<Link href={"https://www.exeter.ac.uk/"} className="w-fit h-fit border border-light_text flex gap-8 bg-primary justify-center items-center p-4 z-40 cursor-pointer hover:scale-105 hover:border-white transition-all duration-200 rounded-lg">
 					<Image src="/images/icons/exeter-no-bg.png" width={50} height={50} alt={"logig"} className="bg-white rounded-full" />
-					<h1 className="text-light_text text-3xl font-extrabold">University of Exeter</h1>
+					<h1 className="text-light_text text-3xl font-extrabold hover:text-white transition-all duration-200">University of Exeter</h1>
 				</Link>
 
 				<div className="flex gap-12">
