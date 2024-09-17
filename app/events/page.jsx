@@ -65,19 +65,26 @@ export default function Events() {
 				</div>
 			</div>
 
+			{/* calendar */}
+			<div className="w-full h-full pt-12">
+				<h1 className="text-white font-bold text-6xl flex gap-1"><IoMdArrowDropright className="text-accent" /> Our Calendar</h1>
+
+				{/* add calendar below */}
+			</div>
+
 			{/* next event */}
 			{
 				upcoming.length > 0 && (
-					<div className=" min-h-9w-full h-full">
+					<div className="min-h-80 w-full h-full">
 						<h1 className="text-white font-bold text-6xl flex gap-1"><IoMdArrowDropright className="text-accent" /> Next Event</h1>
 
-						<div className="w-full h-fit flex justify-start  rounded-r-lg">
-							<div className="w-fit h-fit flex items-center">
-								<Image src={upcoming[0].image} width={1000} height={600} alt={"solo programming"} className="w-full h-full object-cover" />
+						<Link href={upcoming[0].link} className="w-full h-fit flex justify-start rounded-r-lg border border-background hover:border-accent cursor-pointer">
+							<div className="w-fit h-full flex items-center">
+								<Image src={upcoming[0].image} width={1000} height={600} alt={"solo programming"} className="object-contain" />
 							</div>
 							{
 								!mapOpen ? (
-									<div className="w-full p-8 rounded-r-md flex flex-col gap-2 bg-primary justify-between">
+									<div className="w-full min-h-full p-8 rounded-r-md flex flex-col gap-2 bg-primary justify-between">
 										<div className="w-full">
 											<h1 className="text-white text-6xl font-extrabold">{upcoming[0].title}</h1>
 											<div className="flex gap-2">
@@ -88,7 +95,7 @@ export default function Events() {
 											<h1 className="text-light_text text-2xl pt-4 font-bold">{upcoming[0].description}</h1>
 										</div>
 
-										<div className="w-full flex justify-end gap-4">
+										<div className="w-full flex justify-end gap-4 z-50">
 											<button className="w-fit h-full p-4 rounded-lg border border-secondary bg-primary flex justify-center items-center hover:border-accent cursor-pointer transition-all duration-200" onClick={() => setMapOpen(true)}>
 												<h1 className="text-light_text font-bold flex justify-center items-center gap-2">Open Map</h1>
 											</button>
@@ -99,7 +106,7 @@ export default function Events() {
 										</div>
 									</div>
 								) : (
-									<div className="w-full rounded-r-md bg-primary flex">
+									<div className="w-full min-h-full rounded-r-md bg-primary flex">
 										<Map longitude={upcoming[0].longitude} latitude={upcoming[0].latitude} />
 
 										<div className="flex flex-col justify-start items-center gap-4 p-8">
@@ -118,19 +125,10 @@ export default function Events() {
 									</div>
 								)
 							}
-
-						</div>
+						</Link>
 					</div>
 				)
 			}
-
-
-			{/* calendar */}
-			<div className="w-full h-full pt-12">
-				<h1 className="text-white font-bold text-6xl flex gap-1"><IoMdArrowDropright className="text-accent" /> Our Calendar</h1>
-
-				{/* add calendar below */}
-			</div>
 
 			{/* list of upcoming events */}
 			<div className="w-full h-full pt-12">
@@ -155,14 +153,19 @@ export default function Events() {
 									upcoming.length > 0 ? (
 										upcoming.map((event, index) => {
 											return (
-												<div key={index} className="w-full h-fit p-8 bg-primary rounded-xl flex flex-col gap-2 border border-secondary">
-													<h1 className="text-accent text-6xl font-extrabold">{event.title}</h1>
-													<div className="flex gap-4">
-														<h1 className="text-light_text text-2xl font-bold">{event.date}</h1>
-														<h1 className="text-light_text text-2xl font-bold">{event.time}</h1>
+												<Link href={`events/${event.id}`} key={index} className="w-full h-fit p-8 bg-primary rounded-xl flex gap-2 border border-secondary hover:border-accent cursor-pointer">
+
+													<Image src={event.image} width={400} height={400} alt={"solo programming"} className="object-cover rounded-lg" />
+													<div>
+														<h1 className="text-accent text-6xl font-extrabold">{event.title}</h1>
+														<div className="flex gap-4">
+															<h1 className="text-light_text text-2xl font-bold">{event.date}</h1>
+															<h1 className="text-light_text text-2xl font-bold">{event.time}</h1>
+														</div>
+														<h1 className="text-light_text text-2xl pt-4 font-bold">{event.description}</h1>
 													</div>
-													<h1 className="text-light_text text-2xl pt-4 font-bold">{event.description}</h1>
-												</div>
+
+												</Link>
 											)
 										})
 									) : (
@@ -179,7 +182,7 @@ export default function Events() {
 									past.length > 0 ? (
 										past.map((event, index) => {
 											return (
-												<Link href={`events/${event.id}`} key={index} className="w-full h-fit p-8 bg-primary rounded-xl flex flex gap-2 border border-secondary hover:border-accent cursor-pointer">
+												<Link href={`events/${event.id}`} key={index} className="w-full h-fit p-8 bg-primary rounded-xl flex gap-2 border border-secondary hover:border-accent cursor-pointer">
 
 													<Image src={event.image} width={400} height={400} alt={"solo programming"} className="object-cover rounded-lg" />
 													<div>
