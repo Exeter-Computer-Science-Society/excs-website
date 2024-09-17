@@ -1,3 +1,4 @@
+
 [
 	{
 		"name": "Tasbir Rahaman",
@@ -56,10 +57,6 @@
 			{
 				"type": "linkedin",
 				"url": "https://www.linkedin.com/in/nehir-yurtsever-2932a0233/"
-			},
-			{
-				"type": "github",
-				"url": "https://www.github.com/"
 			}
 		]
 	},
@@ -72,10 +69,6 @@
 			{
 				"type": "linkedin",
 				"url": "https://www.linkedin.com/in/zeynep-g%C3%BCler2005/"
-			},
-			{
-				"type": "github",
-				"url": "https://www.github.com/"
 			}
 		]
 	},
@@ -88,10 +81,6 @@
 			{
 				"type": "linkedin",
 				"url": "https://www.linkedin.com/in/cody-lokyitam/"
-			},
-			{
-				"type": "github",
-				"url": "https://www.github.com/"
 			}
 		]
 	},
@@ -104,10 +93,6 @@
 			{
 				"type": "linkedin",
 				"url": "https://www.linkedin.com/in/crystal-tsui-8997582a7/"
-			},
-			{
-				"type": "github",
-				"url": "https://www.github.com/"
 			}
 		]
 	}

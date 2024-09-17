@@ -79,19 +79,19 @@ export function Committee({data, detailed=false}) {
 												<div key={index}>
 													{
 														link.type === "instagram" ? (
-															<a href={link.url} target="_blank" >
+															<a href={link.url} target="_blank" className="hover:text-white transition-all duration-200 cursor-pointer">
 																<IoLogoInstagram size={24} className="rounded-2xl hover:bg-white"/>
 															</a>
 														) : link.type === "github" ? (
-															<a href={link.url} target="_blank">
+															<a href={link.url} target="_blank" className="hover:text-white transition-all duration-200 cursor-pointer">
 																<FiGithub size={24} />
 															</a>
 														) : link.type === "linkedin" ? (
-															<a href={link.url} target="_blank">
+															<a href={link.url} target="_blank" className="hover:text-white transition-all duration-200 cursor-pointer">
 																<IoLogoLinkedin size={24} />
 															</a>
 														) : link.type === "other" ? (
-															<a href={link.url} target="_blank">
+															<a href={link.url} target="_blank" className="hover:text-white transition-all duration-200 cursor-pointer">
 																<IoLink size={24} />
 															</a>
 														) : null
