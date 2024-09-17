@@ -66,10 +66,11 @@ export default function Events() {
 			</div>
 
 			{/* next event */}
-			<div className=" min-h-9w-full h-full">
-				<h1 className="text-white font-bold text-6xl flex gap-1"><IoMdArrowDropright className="text-accent" /> Next Event</h1>
-				{
-					upcoming.length > 0 ? (
+			{
+				upcoming.length > 0 && (
+					<div className=" min-h-9w-full h-full">
+						<h1 className="text-white font-bold text-6xl flex gap-1"><IoMdArrowDropright className="text-accent" /> Next Event</h1>
+
 						<div className="w-full h-fit flex justify-start  rounded-r-lg">
 							<div className="w-fit h-fit flex items-center">
 								<Image src={upcoming[0].image} width={1000} height={600} alt={"solo programming"} className="w-full h-full object-cover" />
@@ -119,13 +120,10 @@ export default function Events() {
 							}
 
 						</div>
-					) : (
-						<div className="w-full h-full p-8 bg-primary rounded-xl flex flex-col gap-2 border border-secondary">
-							<h1 className="text-accent text-6xl font-extrabold">No upcoming events</h1>
-						</div>
-					)
-				}
-			</div>
+					</div>
+				)
+			}
+
 
 			{/* calendar */}
 			<div className="w-full h-full pt-12">
@@ -152,31 +150,58 @@ export default function Events() {
 				<div className="w-full h-full flex flex-col gap-4 pt-6">
 					{
 						toggle ? (
-							upcoming.map((event, index) => {
-								return (
-									<div key={index} className="w-full h-fit p-8 bg-primary rounded-xl flex flex-col gap-2 border border-secondary">
-										<h1 className="text-accent text-6xl font-extrabold">{event.title}</h1>
-										<div className="flex gap-4">
-											<h1 className="text-light_text text-2xl font-bold">{event.date}</h1>
-											<h1 className="text-light_text text-2xl font-bold">{event.time}</h1>
+							<>
+								{
+									upcoming.length > 0 ? (
+										upcoming.map((event, index) => {
+											return (
+												<div key={index} className="w-full h-fit p-8 bg-primary rounded-xl flex flex-col gap-2 border border-secondary">
+													<h1 className="text-accent text-6xl font-extrabold">{event.title}</h1>
+													<div className="flex gap-4">
+														<h1 className="text-light_text text-2xl font-bold">{event.date}</h1>
+														<h1 className="text-light_text text-2xl font-bold">{event.time}</h1>
+													</div>
+													<h1 className="text-light_text text-2xl pt-4 font-bold">{event.description}</h1>
+												</div>
+											)
+										})
+									) : (
+										<div className="w-full h-full p-8 bg-primary rounded-xl flex flex-col gap-2 border border-secondary">
+											<h1 className="text-accent text-6xl font-extrabold">No upcoming events</h1>
 										</div>
-										<h1 className="text-light_text text-2xl pt-4 font-bold">{event.description}</h1>
-									</div>
-								)
-							})
+									)
+								}
+							</>
+
 						) : (
-							past.map((event, index) => {
-								return (
-									<div key={index} className="w-full h-fit p-8 bg-primary rounded-xl flex flex-col gap-2 border border-secondary">
-										<h1 className="text-accent text-6xl font-extrabold">{event.title}</h1>
-										<div className="flex gap-4">
-											<h1 className="text-light_text text-2xl font-bold">{event.date}</h1>
-											<h1 className="text-light_text text-2xl font-bold">{event.time}</h1>
+							<>
+								{
+									past.length > 0 ? (
+										past.map((event, index) => {
+											return (
+												<Link href={`events/${event.id}`} key={index} className="w-full h-fit p-8 bg-primary rounded-xl flex flex gap-2 border border-secondary hover:border-accent cursor-pointer">
+
+													<Image src={event.image} width={400} height={400} alt={"solo programming"} className="object-cover rounded-lg" />
+													<div>
+														<h1 className="text-accent text-6xl font-extrabold">{event.title}</h1>
+														<div className="flex gap-4">
+															<h1 className="text-light_text text-2xl font-bold">{event.date}</h1>
+															<h1 className="text-light_text text-2xl font-bold">{event.time}</h1>
+														</div>
+														<h1 className="text-light_text text-2xl pt-4 font-bold">{event.description}</h1>
+													</div>
+
+												</Link>
+											)
+										})
+									) : (
+										<div className="w-full h-full p-8 bg-primary rounded-xl flex flex-col gap-2 border border-secondary">
+											<h1 className="text-accent text-6xl font-extrabold">No past events</h1>
 										</div>
-										<h1 className="text-light_text text-2xl pt-4 font-bold">{event.description}</h1>
-									</div>
-								)
-							})
+									)
+								}
+							</>
+
 						)
 					}
 				</div>

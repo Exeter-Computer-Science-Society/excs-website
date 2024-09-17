@@ -17,6 +17,12 @@ export function Map({ longitude, latitude }) {
 
 	useEffect(() => {
 		if (map.current) return; // stops map from intializing more than once
+		console.log("thing")
+		if (!longitude || !latitude) return;
+		console.log("here")
+		if (!mapContainer.current) return;
+		console.log("here too")
+
 
 		let region = {
 			bounds:
@@ -47,10 +53,10 @@ export function Map({ longitude, latitude }) {
 			.on('click', () => console.log("open"))
 			.addTo(map.current);
 
-	}, [center.lng, center.lat, zoom, point]);
+	}, [center.lng, center.lat, zoom, point, latitude, longitude]);
 
 
-	return longitude && latitude ? (
+	return mapContainer ? (
 		<div className="relative w-full h-full">
 			<div ref={mapContainer} className="absolute w-full h-full" />
 		</div>

@@ -22,10 +22,10 @@ export default function Home() {
 
 				<FlyingTriangles />
 
-				<div className="w-fit h-fit border border-white flex gap-8 bg-primary justify-center items-center p-4 z-40">
+				<Link href={"https://www.exeter.ac.uk/"} className="w-fit h-fit border border-white flex gap-8 bg-primary justify-center items-center p-4 z-40 cursor-pointer hover:bg-secondary transition-all duration-200 rounded-lg">
 					<Image src="/images/icons/exeter-no-bg.png" width={50} height={50} alt={"logig"} className="bg-white rounded-full" />
 					<h1 className="text-light_text text-3xl font-extrabold">University of Exeter</h1>
-				</div>
+				</Link>
 
 				<div className="flex gap-12">
 					<Image src="/images/icons/computer-s-s.svg" width={400} height={100} alt="s" />
@@ -69,7 +69,7 @@ export default function Home() {
 
 			{/* whats new page */}
 			<div className="flex flex-col pt-72">
-				<div className="flex justify-start h-24">
+				<div className="flex justify-start h-12">
 					<h1 className="text-3xl font-bold text-light_text flex"><IoMdArrowDropright className="text-accent" />New for this year!</h1>
 				</div>
 
@@ -79,9 +79,9 @@ export default function Home() {
 
 			{/* committee page */}
 			<div className="flex flex-col pt-72">
-				<div className="flex justify-between h-24">
+				<div className="flex justify-between h-12">
 					<h1 className="text-3xl font-bold text-light_text flex"><IoMdArrowDropright className="text-accent" />Your committee</h1>
-					<h1 className="text-xl font-bold text-accent cursor-pointer">View ALL...</h1>
+					<Link href={"/committee"} className="w-fit h-fit text-xl font-bold text-accent cursor-pointer underline">View ALL...</Link>
 				</div>
 				<Committee />
 			</div>
