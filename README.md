@@ -11,33 +11,135 @@
 - run `npm run dev`
 
 ## Transition
-- here will be described steps to undertake for new committee's
-
-#### Housekeeping
-- please remove all content from the {x} files and {y} files
-- please remove all images from {public/images/people} folder
-
-#### The committee
-- please add your committee photos to the {public/images/people} folder
-- please update the json file {} with your names, positions and image locations
+- we have written a simple script that configures the website for a new committee!
+- please use carefully, we have tried to make it as fool-proof as possible
 ```
-add json example here
+run file here
+```
+
+## JSON 
+- here we will describe each json file ( you will hopefully only need to interact with these )
+
+#### The new file
+- This file contains new concepts and ideas that your committee would like to implement this year
+- This will be shown on the front page of the site in a list format
+```
+[
+	{
+		"name": "Welcome Our New Committee",
+		"description": "With warm hearts we welcome our new committee for the 2024/25 academic year!",
+		"footnote": "",
+		"image": "/public/images/<REST OF LINK>",
+		"link": "/committee"
+	}
+]
+```
+
+#### Committee file
+- please add your committee photos to the {public/images/people} folder
+- please update the json file `/data/committee.json` with your names, positions and image locations
+- committee images are stored in `/public/images/people/`
+```
+[
+	{
+		"name": "",
+		"position": "",
+		"description": "",
+		"image": "/images/people/<ENTER NAME>.jpeg",
+		"links": [
+			{
+				"type": "linkedin",
+				"url": "https://www.linkedin.com/in/<ENTER ID>"
+			},
+			{
+				"type": "github",
+				"url": "https://github.com/<ENTER USERNAME>"
+			},
+			{
+				"type": "instagram",
+				"url": "https://www.instagram.com/<ENTER USERNAME>"
+			},
+			{
+				"type": "other",
+				"url": "<LINK HERE>"
+			}
+		]
+	}
+]
+```
+
+#### Past committee file
+- this file commemorates fallen committee soldiers
+- the transition script should migrate all current committees into the previous committee folder `/data/past_committee.json` ( please fix if it doesnt )
+- committee images are stored in `/public/images/people/past`
+- below is a description of how to add a committee to the json file
+```
+[
+	{
+		"name": "",
+		"position": "",
+		"description": "",
+		"image": "/images/people/<ENTER NAME>.jpeg",
+		"links": [
+			{
+				"type": "linkedin",
+				"url": "https://www.linkedin.com/in/<ENTER ID>"
+			},
+			{
+				"type": "github",
+				"url": "https://github.com/<ENTER USERNAME>"
+			},
+			{
+				"type": "instagram",
+				"url": "https://www.instagram.com/<ENTER USERNAME>"
+			},
+			{
+				"type": "other",
+				"url": "<LINK HERE>"
+			}
+		]
+	}
+]
 ```
 
 #### Events
 - here will be described how to publish an event to the website
-- please locate the json file {}
-- add the relevant event data in this format
+- please locate the json file `/data/events.json`
+- the date must be in the provided format, otherwise it wont work
+- the id must not be repeated
 ```
-add json example here
+[
+	{
+		"id": 1,
+		"title": "<SOCIAL NAME>",
+		"description": "<DESCEIPTION>",
+		"image": "/images/events/<IMAGE NAME>.jpeg",
+		"date": "<YEAR>-<MONTH>-<DAY>",
+		"time": "<TIME>",
+		"location": "<VENUE NAME>",
+		"location_link": "<ENTER GOOGLE LINK>",
+		"fixr": "<ENTER FIXR LINK>",
+		"link": "<ENTER INSTA LINK OR OTHER>",
+		"tags": ["<TAG 1>", "<TAG 2>"],
+		"longitude": <ENTER LONGITUDE>,
+		"latitude": <ENTER LATITUDE>
+	}
+]
 ```
 
 #### Featured Projects
-- if you wish to include featured projects please update the {} file regularly
-- locate the json file {}
-- add the project in this format
+- if you wish to include featured projects please update the `/data/featured_projects.json` file regularly
 ```
-add json format
+[
+	{
+		"title": "the project name",
+		"languages": "python | julia ...",
+		"description": "",
+		"image": "/public/images/<LINK>",
+		"link": "https://www.github.com/<USERNAME>/<PUBLIC REPO>",
+		"author": "Wiktor Wiejak"
+	}
+]
 ```
 
-#### Something else
+- please also update the winning project using the same format every month if you are doing this!
