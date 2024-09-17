@@ -27,8 +27,8 @@ export default function FeaturedProjects() {
 					<h1 className="text-white font-bold text-3xl">Raise awareness + get awarded for a project you are working on in your free time!</h1>
 					<div className="group w-fit h-fit rounded-full">
 						<div className="w-full flex h-fit">
-							<Link href={"mailto:excs@groups.exeterguild.com"} target="_blank" className="w-fit h-16 text-accent text-2xl font-bold border-2 p-4 border-accent bg-background rounded-lg group-hover:bg-accent transition-all duration-200">
-								<h1 className="group-hover:text-background transition-all duration-200">Submit Your Project</h1>
+							<Link href={"mailto:excs@groups.exeterguild.com"} target="_blank" className="w-fit h-16 text-accent text-2xl font-bold border-2 p-4 border-accent bg-background rounded-lg group-hover:border-white transition-all duration-200">
+								<h1 className="group-hover:text-white transition-all duration-200">Submit Your Project</h1>
 							</Link>
 						</div>
 					</div>
@@ -85,8 +85,8 @@ export default function FeaturedProjects() {
 					</div>
 
 					<div className="w-fit flex h-fit group">
-						<Link href={winner.link} target="_blank" className="w-fit h-16 text-accent text-2xl font-bold border-2 p-4 border-accent bg-primary rounded-lg group-hover:bg-accent transition-all duration-200">
-							<h1 className="group-hover:text-primary transition-all duration-200">View on GitHub</h1>
+						<Link href={winner.link} target="_blank" className="w-fit h-16 text-accent text-2xl font-bold border-2 p-4 border-accent bg-primary rounded-lg group-hover:border-white transition-all duration-200">
+							<h1 className="group-hover:text-white transition-all duration-200">View on GitHub</h1>
 						</Link>
 					</div>
 				</div>
@@ -102,8 +102,8 @@ export default function FeaturedProjects() {
 					{
 						!more ? (
 							<div className="w-fit flex h-fit group">
-								<button href={winner.link} target="_blank" className="w-fit h-16 text-accent text-2xl font-bold border-2 p-4 border-accent bg-background rounded-lg group-hover:bg-accent transition-all duration-200" onClick={() => setMore(true)}>
-									<h1 className="group-hover:text-background transition-all duration-200">Learn More</h1>
+								<button href={winner.link} target="_blank" className="w-fit h-16 text-accent text-2xl font-bold border-2 p-4 border-accent bg-background rounded-lg group-hover:border-white transition-all duration-200" onClick={() => setMore(true)}>
+									<h1 className="group-hover:text-white transition-all duration-200">Learn More</h1>
 								</button>
 							</div>
 						) : (
