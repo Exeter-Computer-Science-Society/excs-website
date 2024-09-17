@@ -7,6 +7,7 @@ import { Map } from "@/components/Map";
 
 // icons
 import { IoMdArrowDropright } from "react-icons/io";
+import { CiLink } from "react-icons/ci";
 
 // data
 import data from "@/data/events.json";
@@ -66,11 +67,9 @@ export default function Events() {
 			</div>
 
 			{/* calendar */}
-			<div className="w-full h-full pt-12">
+			{/* <div className="w-full h-full pt-12">
 				<h1 className="text-white font-bold text-6xl flex gap-1"><IoMdArrowDropright className="text-accent" /> Our Calendar</h1>
-
-				{/* add calendar below */}
-			</div>
+			</div> */}
 
 			{/* next event */}
 			{
@@ -78,7 +77,7 @@ export default function Events() {
 					<div className="min-h-80 w-full h-full">
 						<h1 className="text-white font-bold text-6xl flex gap-1"><IoMdArrowDropright className="text-accent" /> Next Event</h1>
 
-						<Link href={upcoming[0].link} className="w-full h-fit flex justify-start rounded-r-lg border border-background hover:border-accent cursor-pointer">
+						<div className="w-full h-fit flex justify-start rounded-r-lg border border-background hover:border-accent group">
 							<div className="w-fit h-full flex items-center">
 								<Image src={upcoming[0].image} width={1000} height={600} alt={"solo programming"} className="object-contain" />
 							</div>
@@ -95,7 +94,11 @@ export default function Events() {
 											<h1 className="text-light_text text-2xl pt-4 font-bold">{upcoming[0].description}</h1>
 										</div>
 
-										<div className="w-full flex justify-end gap-4 z-50">
+										<div className="w-full flex justify-end gap-4">
+											<Link href={upcoming[0].link}>
+												<CiLink className="w-16 h-16 text-light_text text-2xl font-bold cursor-pointer transition-all hover:scale-110 hover:text-white duration-200" />
+											</Link>
+
 											<button className="w-fit h-full p-4 rounded-lg border border-secondary bg-primary flex justify-center items-center hover:border-accent cursor-pointer transition-all duration-200" onClick={() => setMapOpen(true)}>
 												<h1 className="text-light_text font-bold flex justify-center items-center gap-2">Open Map</h1>
 											</button>
@@ -125,13 +128,13 @@ export default function Events() {
 									</div>
 								)
 							}
-						</Link>
+						</div>
 					</div>
 				)
 			}
 
 			{/* list of upcoming events */}
-			<div className="w-full h-full pt-12">
+			<div className="w-full h-full pt-24">
 				<h1 className="text-white font-bold text-6xl flex gap-1"><IoMdArrowDropright className="text-accent" /> Our {toggle ? "Upcoming" : "Past"} Events</h1>
 
 				<div className="flex gap-4 w-full justify-start items-center pt-12">
@@ -153,7 +156,7 @@ export default function Events() {
 									upcoming.length > 0 ? (
 										upcoming.map((event, index) => {
 											return (
-												<Link href={`events/${event.id}`} key={index} className="w-full h-fit p-8 bg-primary rounded-xl flex gap-2 border border-secondary hover:border-accent cursor-pointer">
+												<Link href={`events/${event.id}`} key={index} className="w-full h-fit p-8 bg-primary rounded-xl flex gap-8 border border-secondary hover:border-accent cursor-pointer">
 
 													<Image src={event.image} width={400} height={400} alt={"solo programming"} className="object-cover rounded-lg" />
 													<div>

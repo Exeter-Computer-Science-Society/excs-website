@@ -12,6 +12,9 @@ import { NewList } from "@/components/NewList";
 // icons
 import { IoMdArrowDropright } from "react-icons/io";
 
+// data
+import data from "@/data/committee.json";
+
 
 export default function Home() {
 	return (
@@ -83,7 +86,7 @@ export default function Home() {
 					<h1 className="text-3xl font-bold text-light_text flex"><IoMdArrowDropright className="text-accent" />Your committee</h1>
 					<Link href={"/committee"} className="w-fit h-fit text-xl font-bold text-accent cursor-pointer underline">View ALL...</Link>
 				</div>
-				<Committee />
+				<Committee data={data}/>
 			</div>
 		</div>
 	)
