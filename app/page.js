@@ -83,10 +83,24 @@ export default function Home() {
 			{/* committee page */}
 			<div className="flex flex-col pt-72">
 				<div className="flex justify-between h-12">
-					<h1 className="text-3xl font-bold text-light_text flex"><IoMdArrowDropright className="text-accent" />Your committee</h1>
+					<h1 className="text-3xl font-bold text-light_text flex"><IoMdArrowDropright className="text-accent" />Your Committee</h1>
 					<Link href={"/committee"} className="w-fit h-fit text-xl font-bold text-accent cursor-pointer underline">View ALL...</Link>
 				</div>
-				<Committee data={data}/>
+				<Committee data={data} />
+			</div>
+
+			{/* sponsorships page */}
+			<div className="flex flex-col pt-72">
+				<div className="flex flex-col justify-between h-fit">
+					<h1 className="text-3xl font-bold text-light_text flex"><IoMdArrowDropright className="text-accent" />Our Sponsors</h1>
+					<Link href={"https://shecancode.io"} target={"_blank"} className="w-fit h-fit text-xl font-bold text-accent cursor-pointer underline">
+						<Image src={"/images/SheCanCode.png"} width={400} height={400} alt={"SheCanCode"} />
+					</Link>
+
+					<Link href={"mailto:excs@groups.exeterguild.com"} className="w-fit h-fit text-xl font-bold text-accent cursor-pointer underline">
+						<h1>Interested in Sponsoring Us?</h1>
+					</Link>
+				</div>
 			</div>
 		</div>
 	)
