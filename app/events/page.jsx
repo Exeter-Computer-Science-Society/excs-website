@@ -77,7 +77,7 @@ export default function Events() {
 					<div className="min-h-80 w-full h-full">
 						<h1 className="text-white font-bold text-6xl flex gap-1"><IoMdArrowDropright className="text-accent" /> Next Event</h1>
 
-						<div className="w-full h-fit flex justify-start rounded-r-lg border border-background hover:border-accent group">
+						<div className="w-full h-fit flex max-xl:flex-col justify-start rounded-r-lg border border-background hover:border-accent group">
 							<div className="w-fit h-full flex items-center">
 								<Image src={upcoming[0].image} width={1000} height={600} alt={"solo programming"} className="object-contain" unoptimized />
 							</div>
@@ -85,7 +85,7 @@ export default function Events() {
 								!mapOpen ? (
 									<div className="w-full min-h-full p-8 rounded-r-md flex flex-col gap-2 bg-primary justify-between">
 										<div className="w-full">
-											<h1 className="text-white text-6xl font-extrabold">{upcoming[0].title}</h1>
+											<h1 className="text-white text-6xl max-lg:text-4xl font-extrabold">{upcoming[0].title}</h1>
 											<div className="flex gap-2">
 												<h1 className="text-light_text text-2xl font-bold">{upcoming[0].date}</h1>
 												<h1 className="text-light_text text-2xl font-bold">{upcoming[0].time}</h1>
@@ -158,14 +158,14 @@ export default function Events() {
 											return (
 												<Link href={`events/${event.id}`} key={index} className="w-full h-fit p-8 bg-primary rounded-xl flex gap-8 border border-secondary hover:border-accent cursor-pointer">
 
-													<Image src={event.image} width={400} height={400} alt={"solo programming"} className="object-cover rounded-lg" unoptimized />
+													<Image src={event.image} width={400} height={400} alt={"solo programming"} className="w-1/3 h-1/3 aspect-square object-cover rounded-lg" unoptimized />
 													<div>
-														<h1 className="text-accent text-6xl font-extrabold">{event.title}</h1>
+														<h1 className="text-accent text-6xl max-lg:text-4xl font-extrabold">{event.title}</h1>
 														<div className="flex gap-4">
-															<h1 className="text-light_text text-2xl font-bold">{event.date}</h1>
-															<h1 className="text-light_text text-2xl font-bold">{event.time}</h1>
+															<h1 className="text-light_text text-2xl max-lg:text-xl font-bold">{event.date}</h1>
+															<h1 className="text-light_text text-2xl max-lg:text-xlfont-bold">{event.time}</h1>
 														</div>
-														<h1 className="text-light_text text-2xl pt-4 font-bold">{event.description}</h1>
+														<h1 className="text-light_text text-2xl max-lg:text-xl pt-4 font-bold">{event.description}</h1>
 													</div>
 
 												</Link>

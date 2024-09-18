@@ -41,7 +41,7 @@ export default function FeaturedProjects() {
 			</div>
 
 			{/* goals */}
-			<div className="w-full h-full flex gap-4">
+			<div className="w-full h-full flex max-lg:flex-col gap-4">
 				<div className="w-full min-h-full p-8 py-16 flex flex-col gap-8 justify-center items-center text-center border-2 border-secondary rounded-xl">
 					<h1 className="text-6xl">✨</h1>
 					<h1 className="text-white text-3xl font-bold">Boost awareness about your project!</h1>
@@ -76,12 +76,12 @@ export default function FeaturedProjects() {
 
 					</div>
 
-					<div className="flex gap-8">
-						<Image src={winner.image ? winner.image : "images/filler.png"} width={400} height={400} alt="project" className="w-full rounded-xl" unoptimized />
-
-						<div>
+					<div className="flex max-lg:flex-col gap-8">
+						<div className="w-full">
 							<h1 className="text-light_text text-2xl font-bold">{winner.description}</h1>
 						</div>
+
+						<Image src={winner.image ? winner.image : "images/filler.png"} width={400} height={400} alt="project" className="w-1/3 max-lg:w-full h-full object-contain rounded-xl" unoptimized />
 					</div>
 
 					<div className="w-fit flex h-fit group">

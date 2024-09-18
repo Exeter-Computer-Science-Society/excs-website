@@ -31,6 +31,17 @@
     --gradient-bg: linear-gradient(var(--gradient-top), var(--gradient-bottom));
 }
 
+/* Mobile responsive styles */
+@media screen and (max-width: 1024px) {
+    :root {
+        --header-height: 10vh;
+        --page-padding-left: 7%;
+        --page-padding-right: 7%;
+        --spacing-small: 12px;
+        --spacing-medium: 18px;
+    }
+}
+
 @media (prefers-color-scheme: dark) {
 	/* when the user wants dark */
 }
@@ -67,7 +78,6 @@ body {
         opacity: 1;
     }
 }
-
 
 
 body::-webkit-scrollbar {

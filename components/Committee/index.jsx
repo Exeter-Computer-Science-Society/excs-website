@@ -14,8 +14,8 @@ export function Committee({data, detailed=false}) {
 			{
 				data.map((member, index) => {
 					return (
-						<div key={index} className="w-full h-full flex flex-col gap-1 p-4 rounded-lg bg-primary bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary from-0% to-secondary to-100%">
-							<Image src={member.image} width={300} height={300} alt="user" className="rounded-xl border border-white object-cover" unoptimized />
+						<div key={index} className="w-fit h-full flex flex-col justify-center items-center gap-1 p-4 rounded-lg bg-primary bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary from-0% to-secondary to-100%">
+							<Image src={member.image} width={300} height={300} alt="user" className="rounded-xl border border-white object-cover aspect-square" unoptimized />
 
 							<div className="w-full h-fit flex flex-col justify-center items-center text-light_text">
 								<h1 className="text-white font-bold text-2xl">{member.position}</h1>
@@ -56,13 +56,13 @@ export function Committee({data, detailed=false}) {
 			}
 		</div>
 	) : (
-		<div className="grid grid-cols-[repeat(auto-fit,minmax(30rem,2fr))] gap-4 h-full w-full">
+		<div className="grid grid-cols-[repeat(auto-fit,minmax(28rem,3fr))] gap-4 h-full w-full">
 			{
 				data.map((member, index) => {
 					return (
 						<div key={index} className="w-full h-full flex flex-col justify-between gap-4 p-8 rounded-lg bg-primary bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary from-0% to-secondary to-100% border border-background hover:border-accent transition-all duration-200 cursor-pointer">
 							<div className="flex gap-8">
-								<Image src={member.image} width={100} height={100} alt="user" className="w-52 h-52 rounded-xl border border-white aspect-square object-cover" unoptimized />
+								<Image src={member.image} width={100} height={100} alt="user" className="w-44 h-44 rounded-xl border border-white aspect-square object-cover" unoptimized />
 
 								<div className="flex flex-col gap-4">
 									<h1 className="text-white font-bold text-4xl">{member.position}</h1>

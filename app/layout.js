@@ -28,8 +28,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
 	return (
-		<html lang="en">
-			<body className={`${geistSans.variable} ${geistMono.variable} antialiased w-screen h-full overflow-x-hidden bg-background`} >
+		<html lang="en" className="w-screen h-full overflow-x-hidden">
+			<body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background`} >
 				<TopBar />
 
 				{children}
