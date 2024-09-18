@@ -2,7 +2,7 @@ import { Committee } from "../../components/Committee";
 import { IoMdArrowDropright } from "react-icons/io";
 
 import new_committee from "@/data/committee.json"
-import old_committee from "@/data/past_committee.json"
+import old_committee from "@/data/past/committee-2023-2024.json"
 
 export default function CommitteePage() {
 	return (
