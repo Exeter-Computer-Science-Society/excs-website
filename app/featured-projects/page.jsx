@@ -77,7 +77,7 @@ export default function FeaturedProjects() {
 					</div>
 
 					<div className="flex gap-8">
-						<Image src={winner.image ? winner.image : "/filler"} width={400} height={400} alt="project" className="w-full rounded-xl border border-white" />
+						<Image src={winner.image ? winner.image : "/filler"} width={400} height={400} alt="project" className="w-full rounded-xl" />
 
 						<div>
 							<h1 className="text-light_text text-2xl font-bold">{winner.description}</h1>
