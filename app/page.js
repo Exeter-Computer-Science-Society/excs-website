@@ -21,9 +21,10 @@ export default function Home() {
 		<div className="w-screen h-full pt-32 pl-[var(--page-padding-left)] pr-[var(--page-padding-right)]">
 
 			{/* Heading */}
-			<div className="w-full h-screen flex flex-col justify-center items-center gap-20 pb-20">
+			<div className="w-full h-screen flex flex-col justify-center items-center gap-20 pb-20 animate-[backgroundEnter_3s_forwards_0.1s]">
 
 				<FlyingTriangles />
+
 				<div className="w-full h-screen flex flex-col justify-center items-center gap-20 pb-72 animate-[infoEnter_1s_forwards_0.1s]">
 					<Link href={"https://www.exeter.ac.uk/"} className="w-fit h-fit border border-light_text flex gap-8 bg-primary justify-center items-center p-4 z-40 cursor-pointer hover:scale-105 hover:border-white transition-all duration-200 rounded-lg">
 						<Image src="/images/icons/exeter-no-bg.png" width={50} height={50} alt={"logig"} className="bg-white rounded-full" />
