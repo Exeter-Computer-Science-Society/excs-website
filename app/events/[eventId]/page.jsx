@@ -11,9 +11,9 @@ import { CiLink } from "react-icons/ci";
 import { Map } from "@/components/Map";
 
 // Return a list of `params` to populate the [slug] dynamic segment
-// export async function generateStaticParams() {
-// 	return [{ eventId: '1' }, { eventId: '2' }, { eventId: '3' }]
-// }
+export async function generateStaticParams() {
+	return [{ eventId: '1' }, { eventId: '2' }, { eventId: '3' }]
+}
 
 export default function EventsPage({ params }) {
 	const { eventId } = params
