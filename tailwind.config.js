@@ -16,7 +16,22 @@ module.exports = {
 				middle_text: "var(--text-middle-colour)",
 				light_text: "var(--text-light-colour)",
 			},
-		},
+			// keyframes: {
+			// 	infoEnter: {
+			// 		'from': {
+			// 			opacity: '0',
+			// 			transform: 'translateY(100%)'
+			// 		},
+			// 		'to': {
+			// 			opacity: '1',
+			// 			transform: 'translateY(0%)'
+			// 		}
+			// 	}
+			// },
+			// animation: {
+			// 	infoEnter: "infoEnter 1s forward 0.1s"
+			// }
+		}
 	},
 	plugins: [],
 };

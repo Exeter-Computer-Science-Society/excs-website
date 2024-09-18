@@ -154,7 +154,7 @@ export function FlyingTriangles() {
 	const [created, setCreated] = useState(false)
 
 	useEffect(() => {
-		if(window.location.pathname !== "/") return
+		if (window.location.pathname !== "/") return
 
 		if (!created) {
 			console.log("creating")
