@@ -1,8 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-	basePath: '/',
+	basePath: "",
 	// output: 'export',
-	reactStrictMode: false
+	reactStrictMode: false,
+	distDir: "build",
 };
 
 export default nextConfig;

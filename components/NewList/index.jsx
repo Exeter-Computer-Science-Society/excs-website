@@ -28,7 +28,7 @@ export function NewList() {
 							</div>
 
 							<div>
-								<Image src={thing.image} width={600} height={600} alt="new thing" className="object-cover rounded-lg"/>
+								<Image src={thing.image} width={600} height={600} alt="new thing" className="object-cover rounded-lg" unoptimized />
 							</div>
 						</Link>
 					)

@@ -3,7 +3,7 @@
         "name": "Tasbir Rahaman",
         "position": "President",
         "description": "Hi! I am thrilled to be the President of EXCS this year. As the President, my goals are to create a vibrant community where you can connect with like-minded peers, enjoy engaging social events, and also stay focused on your academic and career aspirations. If you have any questions, feel free to contact me, or any of the other members :)",
-        "image": "/images/people/tasbir.jpeg",
+        "image": "images/people/tasbir.jpeg",
         "links": [
             {
                 "type": "linkedin",
@@ -23,7 +23,7 @@
         "name": "Kechen Liu",
         "position": "Vice President",
         "description": "I'm excited to step into the role of Vice President for our Computer Science Society. This year, my mission is to amplify your voice and ensure that every member has the support and opportunities they need to thrive. My focus will be on enhancing our collective learning experiences, facilitating industry connections, and promoting collaboration across all levels of expertise.",
-        "image": "/images/people/kechen.jpeg",
+        "image": "images/people/kechen.jpeg",
         "links": [
             {
                 "type": "linkedin",
@@ -39,7 +39,7 @@
         "name": "Wiktor Wiejak",
         "position": "Hackathon Director",
         "description": "Hi! I'm a 3rd year computer science student who's recently acquired a passion for hackathons! Since the running of Hack South West last February I hope to be able to continue the tradition next year round with even more pizzas and prizes! Feel free to reach out and ask anything about hackathons or just to chat!",
-        "image": "/images/people/wiktor.jpeg",
+        "image": "images/people/wiktor.jpeg",
         "links": [
             {
                 "type": "linkedin",
@@ -55,7 +55,7 @@
         "name": "Nehir Yurtsever",
         "position": "Academic Director",
         "description": "Hi! I am delighted to be the Academic Director of EXCS this year. One of the main reasons I chose to pursue a computer science degree was the exciting research opportunities it offers. Now, as Academic Director, I am thrilled to dive deeper into this field through the talks, workshops, and lectures I'll be organising. I look forward to learning and exploring alongside all of you!",
-        "image": "/images/people/nehir.jpeg",
+        "image": "images/people/nehir.jpeg",
         "links": [
             {
                 "type": "linkedin",
@@ -67,7 +67,7 @@
         "name": "Zeynep Guler",
         "position": "Social Director",
         "description": "Hi everyone!! I am thrilled to be the Socials & Events Director for the Computer Science Society this year. As the Social and Events Director, I took on this role because I love organising events that bring people together and create lasting memories. My goal is to plan a mix of events that everyone can enjoy. I want to make sure there’s something for everyone, helping members connect and have a great time.",
-        "image": "/images/people/zeynep.jpeg",
+        "image": "images/people/zeynep.jpeg",
         "links": [
             {
                 "type": "linkedin",
@@ -79,7 +79,7 @@
         "name": "Cody Tam",
         "position": "Treasurer",
         "description": "Hi! I am delighted to be the Treasurer of the EXCS this year. My goal is to ensure that our society's finances are managed effectively, allowing us to host amazing events, workshops, and activities that benefit all our members. If you have any questions or suggestions on how we can make the most of our resources, feel free to reach out anytime!",
-        "image": "/images/people/cody.jpeg",
+        "image": "images/people/cody.jpeg",
         "links": [
             {
                 "type": "linkedin",
@@ -91,7 +91,7 @@
         "name": "Crystal Tsui",
         "position": "Marketing Director",
         "description": "Hi all! I am more than excited to be the Marketing Director of EXCS this year! As the committee, I will do my best in producing insightful visuals and content for our society’s social media pages, as well as some appealing stash for our members. I hope to make it an amazing and remarkable year for all our participants!",
-        "image": "/images/people/crystal.jpeg",
+        "image": "images/people/crystal.jpeg",
         "links": [
             {
                 "type": "linkedin",

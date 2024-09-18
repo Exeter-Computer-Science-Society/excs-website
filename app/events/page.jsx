@@ -62,7 +62,7 @@ export default function Events() {
 				</div>
 
 				<div>
-					<Image src={"/images/easter-ball.png"} width={600} height={600} alt={"solo programming"} />
+					<Image src="images/easter-ball.png" width={600} height={600} alt={"solo programming"} unoptimized />
 				</div>
 			</div>
 
@@ -79,7 +79,7 @@ export default function Events() {
 
 						<div className="w-full h-fit flex justify-start rounded-r-lg border border-background hover:border-accent group">
 							<div className="w-fit h-full flex items-center">
-								<Image src={upcoming[0].image} width={1000} height={600} alt={"solo programming"} className="object-contain" />
+								<Image src={upcoming[0].image} width={1000} height={600} alt={"solo programming"} className="object-contain" unoptimized />
 							</div>
 							{
 								!mapOpen ? (
@@ -158,7 +158,7 @@ export default function Events() {
 											return (
 												<Link href={`events/${event.id}`} key={index} className="w-full h-fit p-8 bg-primary rounded-xl flex gap-8 border border-secondary hover:border-accent cursor-pointer">
 
-													<Image src={event.image} width={400} height={400} alt={"solo programming"} className="object-cover rounded-lg" />
+													<Image src={event.image} width={400} height={400} alt={"solo programming"} className="object-cover rounded-lg" unoptimized />
 													<div>
 														<h1 className="text-accent text-6xl font-extrabold">{event.title}</h1>
 														<div className="flex gap-4">
@@ -187,7 +187,7 @@ export default function Events() {
 											return (
 												<Link href={`events/${event.id}`} key={index} className="w-full h-fit p-8 bg-primary rounded-xl flex gap-2 border border-secondary hover:border-accent cursor-pointer">
 
-													<Image src={event.image} width={400} height={400} alt={"solo programming"} className="object-cover rounded-lg" />
+													<Image src={event.image} width={400} height={400} alt={"solo programming"} className="object-cover rounded-lg" unoptimized />
 													<div>
 														<h1 className="text-accent text-6xl font-extrabold">{event.title}</h1>
 														<div className="flex gap-4">
