@@ -62,7 +62,7 @@ export function Committee({data, detailed=false}) {
 					return (
 						<div key={index} className="w-full h-full flex flex-col justify-between gap-4 p-8 rounded-lg bg-primary bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary from-0% to-secondary to-100% border border-background hover:border-accent transition-all duration-200 cursor-pointer">
 							<div className="flex gap-8">
-								<Image src={member.image} width={100} height={100} alt="user" className="rounded-xl border border-white aspect-square object-cover w-full" unoptimized />
+								<Image src={member.image} width={100} height={100} alt="user" className="w-52 h-52 rounded-xl border border-white aspect-square object-cover" unoptimized />
 
 								<div className="flex flex-col gap-4">
 									<h1 className="text-white font-bold text-4xl">{member.position}</h1>
