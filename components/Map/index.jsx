@@ -13,7 +13,7 @@ export function Map({ longitude, latitude }) {
 	const point = { lng: longitude, lat: latitude };
 	const [zoom] = useState(12);
 
-	maptilersdk.config.apiKey = "ZlaQGUoH6hzaLtKbdCG7" // process.env.REACT_APP_MAP_API_KEY
+	maptilersdk.config.apiKey = process.env.REACT_APP_MAP_API_KEY
 
 	useEffect(() => {
 		if (map.current) return; // stops map from intializing more than once

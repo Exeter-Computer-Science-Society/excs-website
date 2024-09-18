@@ -1,9 +1,6 @@
-'use client'
-
 import data from "@/data/events.json"
 import Image from "next/image"
 import Link from "next/link";
-import { useEffect, useState } from "react"
 import { IoMdArrowDropright } from "react-icons/io";
 
 
@@ -13,25 +10,23 @@ import { CiLocationArrow1 } from "react-icons/ci";
 import { CiLink } from "react-icons/ci";
 import { Map } from "@/components/Map";
 
+// Return a list of `params` to populate the [slug] dynamic segment
+export async function generateStaticParams() {
+	return [{ eventId: '1' }, { eventId: '2' }, { eventId: '3' }]
+}
 
 export default function EventsPage({ params }) {
-	const eventId = params.eventId
+	const { eventId } = params
 
-	const [event, setEvent] = useState(false)
 
-	/**
-	 * get the target event by id
-	 */
-	useEffect(() => {
-		let result = data.filter((e) => {
 
-			console.log(e.id)
-			console.log(eventId)
-			return e.id === (eventId * 1)
-		})
 
-		setEvent(result[0])
-	}, [])
+	let event = data.filter((e) => {
+		return e.id === (eventId * 1)
+	})
+
+	event = event[0]
+
 
 	return (
 		<div className="w-screen h-full pt-32 pl-[var(--page-padding-left)] pr-[var(--page-padding-right)]">
