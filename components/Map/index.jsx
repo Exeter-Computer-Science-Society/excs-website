@@ -45,7 +45,7 @@ export function Map({ longitude, latitude }) {
 		})
 
 		let el = document.createElement('div');
-		el.innerHTML = `<img src="/images/map-point.svg" class="pb-4 object-fit h-12 w-12" alt="point"/>`;
+		el.innerHTML = `<img src="images/map-point.svg" class="pb-4 object-fit h-12 w-12" alt="point"/>`;
 
 		// add marker to map
 		new maptilersdk.Marker({ element: el })
