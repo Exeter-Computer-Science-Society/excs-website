@@ -55,14 +55,14 @@ export default function Events() {
 	return (
 		<div className="w-screen h-full pt-32 pl-[var(--page-padding-left)] pr-[var(--page-padding-right)]">
 			{/* Heading */}
-			<div className="w-full h-screen flex justify-center items-center gap-20 pb-72">
-				<div className="w-1/2 flex flex-col gap-4">
-					<h1 className="text-white font-bold text-6xl flex gap-1"><IoMdArrowDropright className="text-accent" /> EXCS Social Events</h1>
+			<div className="w-full h-screen flex max-xl:flex-col justify-center items-center gap-20 pb-72">
+				<div className="w-full flex flex-col gap-4">
+					<h1 className="text-white font-bold text-9xl flex gap-1"><IoMdArrowDropright className="text-accent" /> EXCS Social Events</h1>
 					<h1 className="text-light_text font-bold text-3xl">Take a look at our incredible social schedule for this year!</h1>
 				</div>
 
 				<div>
-					<Image src="images/easter-ball.png" width={600} height={600} alt={"solo programming"} unoptimized />
+					<Image src="images/easter-ball.png" width={600} height={600} alt={"solo programming"} className="w-full rounded-lg" unoptimized />
 				</div>
 			</div>
 
@@ -156,7 +156,7 @@ export default function Events() {
 									upcoming.length > 0 ? (
 										upcoming.map((event, index) => {
 											return (
-												<Link href={`events/${event.id}`} key={index} className="w-full h-fit p-8 bg-primary rounded-xl flex gap-8 border border-secondary hover:border-accent cursor-pointer">
+												<Link href={`events/${event.id}`} key={index} className="w-full h-fit p-8 bg-primary rounded-xl flex max-xl:flex-col gap-8 border border-secondary hover:border-accent cursor-pointer">
 
 													<Image src={event.image} width={400} height={400} alt={"solo programming"} className="w-1/3 h-1/3 aspect-square object-cover rounded-lg" unoptimized />
 													<div>
