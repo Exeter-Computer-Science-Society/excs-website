@@ -53,11 +53,11 @@ export default function Events() {
 
 
 	return (
-		<div className="w-screen h-full pt-32 pl-[var(--page-padding-left)] pr-[var(--page-padding-right)]">
+		<div className="w-screen h-full pl-[var(--page-padding-left)] pr-[var(--page-padding-right)] flex flex-col justify-start items-center pt-96">
 			{/* Heading */}
 			<div className="w-full h-screen flex max-xl:flex-col justify-center items-center gap-20 pb-72">
 				<div className="w-full flex flex-col gap-4">
-					<h1 className="text-white font-bold text-9xl flex gap-1"><IoMdArrowDropright className="text-accent" /> EXCS Social Events</h1>
+					<h1 className="text-white font-bold text-4xl flex gap-1"><IoMdArrowDropright className="text-accent" /> EXCS Social Events</h1>
 					<h1 className="text-light_text font-bold text-3xl">Take a look at our incredible social schedule for this year!</h1>
 				</div>
 
