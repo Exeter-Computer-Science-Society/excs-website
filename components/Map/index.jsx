@@ -8,29 +8,25 @@ import "@maptiler/sdk/dist/maptiler-sdk.css"
 export function Map({ longitude, latitude }) {
 	const mapContainer = useRef(null);
 	const map = useRef(null);
-
-	const center = { lng: longitude, lat: latitude };
-	const point = { lng: longitude, lat: latitude };
 	const [zoom] = useState(12);
 
-	
-
 	useEffect(() => {
+
 		if (map.current) return; // stops map from intializing more than once
 		console.log("thing")
 		if (!longitude || !latitude) return;
 		console.log("here")
 		if (!mapContainer.current) return;
 		console.log("here too")
-		
+
 		console.log(process.env.REACT_APP_MAP_API_KEY)
-		maptilersdk.config.apiKey = process.env.REACT_APP_MAP_API_KEY
+		maptilersdk.config.apiKey = "GDGyCFQUccD1p3pBDUip"
 
 		let region = {
 			bounds:
 				[[-40, 20], // Southwest coordinates
 				[42.75, 63]],
-			center: [ -1.947754, 51.911034],
+			center: [-1.947754, 51.911034],
 			zoom: 3.75,
 		}
 
@@ -47,7 +43,7 @@ export function Map({ longitude, latitude }) {
 		})
 
 		let el = document.createElement('div');
-		el.innerHTML = `<img src="images/map-point.svg" class="pb-4 object-fit h-12 w-12" alt="point"/>`;
+		el.innerHTML = `<img src="/images/map-point.svg" class="pb-4 object-fit h-12 w-12" alt="point"/>`;
 
 		// add marker to map
 		new maptilersdk.Marker({ element: el })
@@ -55,7 +51,7 @@ export function Map({ longitude, latitude }) {
 			.on('click', () => console.log("open"))
 			.addTo(map.current);
 
-	}, [center.lng, center.lat, zoom, point, latitude, longitude]);
+	}, [zoom, latitude, longitude]);
 
 
 	return mapContainer ? (

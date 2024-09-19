@@ -1,7 +1,6 @@
 import data from "@/data/events.json"
 import Image from "next/image"
 import Link from "next/link";
-import { IoMdArrowDropright } from "react-icons/io";
 
 
 import { BsCalendar2Date } from "react-icons/bs";
@@ -49,9 +48,14 @@ export default function EventsPage({ params }) {
 							<div className="p-8 flex flex-col gap-8">
 								<div className="w-full h-fit flex justify-between">
 									<h1 className="text-white font-bold text-6xl max-xl:text-4xl flex gap-1">{event.title}</h1>
-									<Link href={event.link}>
-										<CiLink className="w-16 h-16 text-light_text text-2xl font-bold cursor-pointer transition-all hover:scale-110 hover:text-white duration-200" />
-									</Link>
+									{
+										event.link !== "" && (
+											<Link href={event.link}>
+												<CiLink className="w-16 h-16 text-light_text text-2xl font-bold cursor-pointer transition-all hover:scale-110 hover:text-white duration-200" />
+											</Link>
+										)
+									}
+
 
 								</div>
 
@@ -72,9 +76,18 @@ export default function EventsPage({ params }) {
 							</div>
 
 							<div className="w-full bg-secondary flex justify-center h-fit p-6 rounded-b-lg">
-								<Link href={event.fixr} target="_blank" className="w-fit h-16 text-black text-2xl font-bold border-2 p-4 border-accent bg-secondary rounded-lg hover:scale-110 hover:border-white transition-all duration-200">
-									<h1 className="text-accent hover:text-white transition-all duration-200">Get Tickets</h1>
-								</Link>
+								{
+									event.fixr !== "" ? (
+										<Link href={event.fixr} target="_blank" className="w-fit h-16 text-black text-2xl font-bold border-2 p-4 border-accent bg-secondary rounded-lg hover:scale-110 hover:border-white transition-all duration-200">
+											<h1 className="text-accent hover:text-white transition-all duration-200">Get Tickets</h1>
+										</Link>
+									) : (
+										<div className="w-fit h-16 text-black text-2xl font-bold border-2 p-4 border-accent bg-secondary rounded-lg hover:scale-110 hover:border-white transition-all duration-200">
+											<h1 className="text-accent hover:text-white transition-all duration-200">Unreleased</h1>
+										</div>
+									)
+								}
+
 							</div>
 						</div>
 					</div>

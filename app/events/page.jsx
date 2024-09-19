@@ -95,17 +95,30 @@ export default function Events() {
 										</div>
 
 										<div className="w-full flex justify-end gap-4">
-											<Link href={upcoming[0].link}>
-												<CiLink className="w-16 h-16 text-light_text text-2xl font-bold cursor-pointer transition-all hover:scale-110 hover:text-white duration-200" />
-											</Link>
+											{
+												upcoming[0].link !== "" && (
+													<Link href={upcoming[0].link}>
+														<CiLink className="w-16 h-16 text-light_text text-2xl font-bold cursor-pointer transition-all hover:scale-110 hover:text-white duration-200" />
+													</Link>
+												)
+											}
 
 											<button className="w-fit h-full p-4 rounded-lg border border-secondary bg-primary flex justify-center items-center hover:border-accent cursor-pointer transition-all duration-200" onClick={() => setMapOpen(true)}>
 												<h1 className="text-light_text font-bold flex justify-center items-center gap-2">Open Map</h1>
 											</button>
 
-											<Link href={upcoming[0].fixr} className="w-fit h-full p-4 rounded-lg border border-secondary bg-primary flex justify-center items-center hover:border-accent cursor-pointer transition-all duration-200">
-												<h1 className="text-light_text font-bold flex justify-center items-center gap-2">Buy Tickets</h1>
-											</Link>
+											{
+												upcoming[0].fixr !== "" ? (
+													<Link href={upcoming[0].fixr} target="_blank" className="w-fit h-full p-4 rounded-lg border border-secondary bg-primary flex justify-center items-center hover:border-accent cursor-pointer transition-all duration-200">
+														<h1 className="text-light_text font-bold flex justify-center items-center gap-2">Buy Tickets</h1>
+													</Link>
+												) : (
+													<div className="w-fit h-full p-4 rounded-lg border border-secondary bg-primary flex justify-center items-center hover:border-accent cursor-pointer transition-all duration-200">
+														<h1 className="text-light_text font-bold flex justify-center items-center gap-2">Unreleased</h1>
+													</div>
+												)
+											}
+
 										</div>
 									</div>
 								) : (
@@ -117,13 +130,22 @@ export default function Events() {
 												<h1 className="text-light_text font-bold flex justify-center items-center gap-2">Close Map</h1>
 											</button>
 
-											<Link href={upcoming[0].location_link} className="w-full h-16 text-nowrap p-4 rounded-lg border border-secondary bg-primary flex justify-center items-center hover:border-accent cursor-pointer transition-all duration-200">
-												<h1 className="text-light_text font-bold flex justify-center items-center gap-2">Open Google</h1>
-											</Link>
+											{
+												upcoming[0].location_link !== "" && (
+													<Link href={upcoming[0].location_link} className="w-full h-16 text-nowrap p-4 rounded-lg border border-secondary bg-primary flex justify-center items-center hover:border-accent cursor-pointer transition-all duration-200">
+														<h1 className="text-light_text font-bold flex justify-center items-center gap-2">Open Google</h1>
+													</Link>
+												)
+											}
 
-											<Link href={upcoming[0].fixr} className="w-full h-16 text-nowrap p-4 rounded-lg border border-secondary bg-primary flex justify-center items-center hover:border-accent cursor-pointer transition-all duration-200">
-												<h1 className="text-light_text font-bold flex justify-center items-center gap-2">Buy Tickets</h1>
-											</Link>
+											{
+												upcoming[0].fixr !== "" && (
+													<Link href={upcoming[0].fixr} className="w-full h-16 text-nowrap p-4 rounded-lg border border-secondary bg-primary flex justify-center items-center hover:border-accent cursor-pointer transition-all duration-200">
+														<h1 className="text-light_text font-bold flex justify-center items-center gap-2">Buy Tickets</h1>
+													</Link>
+												)
+											}
+
 										</div>
 									</div>
 								)
