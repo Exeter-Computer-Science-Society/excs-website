@@ -16,9 +16,8 @@ export function NewList() {
 										<h1 className="text-6xl font-bold text-light_text">{index}.</h1>
 									</div>
 
-									<div className="flex flex-col justify-between">
+									<div className="w-full h-full flex flex-col justify-between items-center">
 										<h1 className="text-white text-3xl max-xl:text-2xl font-bold">{thing.name}</h1>
-
 									</div>
 								</div>
 
