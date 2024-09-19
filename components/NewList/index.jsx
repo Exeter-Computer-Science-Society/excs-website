@@ -9,25 +9,26 @@ export function NewList() {
 			{
 				data.map((thing, index) => {
 					return (
-						<Link href={thing.link} key={index} className="flex max-lg:flex-col justify-between bg-primary p-8 rounded-xl border border-secondary border-solid hover:border-accent cursor-pointer transition-all duration-200">
-							<div className="flex justify-start">
-								<div className="h-full w-fit px-8">
-									<h1 className="text-6xl font-bold text-light_text">{index}.</h1>
+						<Link href={thing.link} key={index} className="flex max-xl:flex-col gap-4 w-full justify-between bg-primary p-8 rounded-xl border border-secondary border-solid hover:border-accent cursor-pointer transition-all duration-200">
+							<div className="w-1/2 max-xl:w-full min-h-full flex flex-col">
+								<div className="w-full h-fit flex justify-start">
+									<div className="h-full w-fit px-8">
+										<h1 className="text-6xl font-bold text-light_text">{index}.</h1>
+									</div>
+
+									<div className="flex flex-col justify-between">
+										<h1 className="text-white text-3xl max-xl:text-2xl font-bold">{thing.name}</h1>
+
+									</div>
 								</div>
 
-								<div className="flex flex-col justify-between">
-									<div>
-										<h1 className="text-white text-3xl max-xl:text-2xl font-bold">{thing.name}</h1>
-										<h1 className="text-light_text text-2xl max-xl:text-lg">{thing.description}</h1>
-
-									</div>
-									<div>
-										<h1 className="text-light_text text-2xl">{thing.footnote}</h1>
-									</div>
+								<div className="h-full w-full flex flex-col justify-between items-center">
+									<h1 className="text-light_text text-2xl max-xl:text-lg">{thing.description}</h1>
+									<h1 className="text-light_text text-2xl">{thing.footnote}</h1>
 								</div>
 							</div>
 
-							<div>
+							<div className="w-1/2 max-xl:w-full min-h-full">
 								<Image src={thing.image} width={600} height={600} alt="new thing" className="object-cover rounded-lg w-full h-fit" unoptimized />
 							</div>
 						</Link>
