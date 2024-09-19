@@ -71,7 +71,7 @@ export function Committee({data, detailed=false}) {
 							</div>
 
 							<div className="w-full h-full flex flex-col gap-16 justify-between items-center text-light_text">
-								<h1 className="text-light_text text-xl">{member.description}</h1>
+								<h1 className="text-light_text text-lg max-xl:text-sm">{member.description}</h1>
 								<div className="w-full flex justify-start gap-3 pt-3">
 									{
 										member.links.map((link, index) => {
