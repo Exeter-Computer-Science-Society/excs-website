@@ -18,7 +18,7 @@ export function TopBar() {
 			</Link>
 
 			<div className="h-full w-full flex gap-4 justify-center items-center">
-				<Link href={"/featured-projects"} className="xl:w-fit h-full max-xl:aspect-square sp-4 rounded-lg border border-secondary bg-primary flex justify-center items-center hover:border-accent cursor-pointer transition-all duration-200">
+				<Link href={"/featured-projects"} className="xl:w-fit h-full max-xl:aspect-square p-4 rounded-lg border border-secondary bg-primary flex justify-center items-center hover:border-accent cursor-pointer transition-all duration-200">
 					<div className="flex gap-1 justify-center items-center">
 						<h1 className="text-light_text max-xl:hidden font-bold">Feature Your Project</h1>
 						<PiScroll className="text-light_text " />
