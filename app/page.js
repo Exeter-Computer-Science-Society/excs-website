@@ -27,8 +27,8 @@ export default function Home() {
 
 				<div className="w-full h-screen flex flex-col justify-center items-center gap-12 pb-72 animate-[infoEnter_1s_forwards_0.1s]">
 					<Link href={"https://www.exeter.ac.uk/"} className="w-fit h-fit border border-light_text flex gap-8 bg-primary justify-center items-center p-4 z-40 cursor-pointer hover:scale-105 hover:border-white transition-all duration-200 rounded-lg">
-						<Image src="images/icons/exeter-no-bg.png" width={50} height={50} alt={"logig"} className="bg-white rounded-full" unoptimized/>
-						<h1 className="text-light_text text-3xl font-extrabold hover:text-white transition-all duration-200">University of Exeter</h1>
+						<Image src="images/icons/exeter-no-bg.png" width={50} height={50} alt={"logig"} className="bg-white rounded-full" unoptimized />
+						<h1 className="text-light_text text-3xl max-xl:text-xl font-extrabold hover:text-white transition-all duration-200">University of Exeter</h1>
 					</Link>
 
 					<div className="flex justify-center gap-8 w-full">
@@ -42,11 +42,13 @@ export default function Home() {
 			{/* about */}
 			<div className="flex flex-col gap-4">
 				<div className="w-full h-fit p-8 bg-primary rounded-xl flex flex-col gap-2 border border-secondary">
-					<h1 className="text-accent text-6xl font-extrabold">Hi!</h1>
+					<h1 className="text-accent text-6xl max-xl:text-4xl font-extrabold">Hi!</h1>
+					<div className="text-light_text text-2xl max-xl:text-lg font-bold">
+						<h1>Welcome to the official website for the Computer Science Society at Exeter University :)</h1>
+						<h1>As the academic society for the Computer Science department it is our responsibility to represent our students&apos; interests, assist their academic growth, foster a sense of community within the department, and further their knowledge within the field.</h1>
+						<h1 className="pt-4"><span className="text-accent text-4xl max-xl:text-2xl font-bold">TLDR &gt;&gt;</span> We run awesome socials, interesting talks, support you, and help you grow your career.</h1>
+					</div>
 
-					<h1 className="text-light_text text-2xl font-bold">Welcome to the official website for the Computer Science Society at Exeter University :)</h1>
-					<h1 className="text-light_text text-2xl font-bold">As the academic society for the Computer Science department it is our responsibility to represent our students&apos; interests, assist their academic growth, foster a sense of community within the department, and further their knowledge within the field.</h1>
-					<h1 className="text-light_text text-2xl pt-4 font-bold"><span className="text-accent text-4xl font-bold">TLDR &gt;&gt;</span> We run awesome socials, interesting talks, support you, and help you grow your career.</h1>
 				</div>
 
 				<div className="h-fit w-full flex flex-wrap gap-4 justify-start items-center">
@@ -96,7 +98,7 @@ export default function Home() {
 				<div className="flex flex-col justify-between h-fit">
 					<h1 className="text-3xl font-bold text-light_text flex"><IoMdArrowDropright className="text-accent" />Our Sponsors</h1>
 					<Link href={"https://shecancode.io"} target={"_blank"} className="w-fit h-fit text-xl font-bold text-accent cursor-pointer underline">
-						<Image src="images/SheCanCode.png" width={400} height={400} alt={"SheCanCode"} unoptimized/>
+						<Image src="images/SheCanCode.png" width={400} height={400} alt={"SheCanCode"} unoptimized />
 					</Link>
 
 					<Link href={"mailto:excs@groups.exeterguild.com"} className="w-fit h-fit text-xl font-bold text-accent cursor-pointer underline">
