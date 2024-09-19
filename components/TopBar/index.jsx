@@ -17,7 +17,7 @@ export function TopBar() {
 				<Image src="images/excs-final.svg" alt="Exeter Computer Science Society" width={150} height={150} unoptimized />
 			</Link>
 
-			<div className="h-full flex gap-4 justify-center items-center">
+			<div className="h-full w-full flex gap-4 justify-center items-center">
 				<Link href={"/featured-projects"} className="xl:w-fit h-full max-xl:aspect-square sp-4 rounded-lg border border-secondary bg-primary flex justify-center items-center hover:border-accent cursor-pointer transition-all duration-200">
 					<div className="flex gap-1 justify-center items-center">
 						<h1 className="text-light_text max-xl:hidden font-bold">Feature Your Project</h1>
