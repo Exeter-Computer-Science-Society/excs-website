@@ -77,7 +77,7 @@ export default function Home() {
 			{/* whats new page */}
 			<div className="flex flex-col pt-72">
 				<div className="flex justify-start h-12">
-					<h1 className="text-3xl font-bold text-light_text flex"><IoMdArrowDropright className="text-accent" />New for this year!</h1>
+					<h1 className="text-3xl font-bold text-light_text flex text-nowrap flex-nowrap"><IoMdArrowDropright className="text-accent" />New for this year!</h1>
 				</div>
 
 				{/* new things */}
@@ -86,10 +86,7 @@ export default function Home() {
 
 			{/* committee page */}
 			<div className="flex flex-col pt-72">
-				<div className="flex justify-between h-12">
-					<h1 className="text-3xl font-bold text-light_text flex"><IoMdArrowDropright className="text-accent" />Your Committee</h1>
-					<Link href={"/committee"} className="w-fit h-fit text-xl font-bold text-accent cursor-pointer underline">View ALL...</Link>
-				</div>
+				<h1 className="text-3xl font-bold text-light_text flex"><IoMdArrowDropright className="text-accent" />Your Committee</h1>
 				<Committee data={data} />
 			</div>
 
