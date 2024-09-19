@@ -13,7 +13,7 @@ export function Map({ longitude, latitude }) {
 	const point = { lng: longitude, lat: latitude };
 	const [zoom] = useState(12);
 
-	maptilersdk.config.apiKey = process.env.REACT_APP_MAP_API_KEY
+	
 
 	useEffect(() => {
 		if (map.current) return; // stops map from intializing more than once
@@ -22,7 +22,8 @@ export function Map({ longitude, latitude }) {
 		console.log("here")
 		if (!mapContainer.current) return;
 		console.log("here too")
-
+		
+		maptilersdk.config.apiKey = process.env.REACT_APP_MAP_API_KEY
 
 		let region = {
 			bounds:
