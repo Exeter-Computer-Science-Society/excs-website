@@ -19,15 +19,15 @@ export default function FeaturedProjects() {
 	const [more, setMore] = useState(false);
 
 	return (
-		<div className="w-screen h-full pt-32 pl-[var(--page-padding-left)] pr-[var(--page-padding-right)]">
+		<div className="w-screen h-full pt-56 pl-[var(--page-padding-left)] pr-[var(--page-padding-right)]">
 			{/* Heading */}
 			<div className="w-full h-screen flex justify-center items-center gap-20 pb-72">
 				<div className="w-1/2 flex flex-col gap-4">
-					<h1 className="text-white font-bold text-6xl flex gap-1"><IoMdArrowDropright className="text-accent" /> EXCS Featured Projects</h1>
-					<h1 className="text-white font-bold text-3xl">Raise awareness + get awarded for a project you are working on in your free time!</h1>
+					<h1 className="text-white font-bold text-6xl max-xl:text-4xl flex gap-1"><IoMdArrowDropright className="text-accent" /> EXCS Featured Projects</h1>
+					<h1 className="text-white font-bold text-3xl max-xl:text-xl">Raise awareness + get awarded for a project you are working on in your free time!</h1>
 					<div className="group w-fit h-fit rounded-full">
 						<div className="w-full flex h-fit">
-							<Link href={"mailto:excs@groups.exeterguild.com"} target="_blank" className="w-fit h-16 text-accent text-2xl font-bold border-2 p-4 border-accent bg-background rounded-lg group-hover:border-white transition-all duration-200">
+							<Link href={"mailto:excs@groups.exeterguild.com"} target="_blank" className="w-fit h-fit text-accent text-2xl font-bold border-2 p-4 border-accent bg-background rounded-lg group-hover:border-white transition-all duration-200">
 								<h1 className="group-hover:text-white transition-all duration-200">Submit Your Project</h1>
 							</Link>
 						</div>

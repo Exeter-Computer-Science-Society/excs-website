@@ -75,7 +75,7 @@ export default function Events() {
 			{
 				upcoming.length > 0 && (
 					<div className="min-h-80 w-full h-full">
-						<h1 className="text-white font-bold text-6xl flex gap-1"><IoMdArrowDropright className="text-accent" /> Next Event</h1>
+						<h1 className="text-white font-bold text-6xl max-xl:text-4xl flex gap-1"><IoMdArrowDropright className="text-accent" /> Next Event</h1>
 
 						<div className="w-full h-fit flex max-xl:flex-col justify-start rounded-r-lg border border-background hover:border-accent group">
 							<div className="w-fit h-full flex items-center">
@@ -135,7 +135,7 @@ export default function Events() {
 
 			{/* list of upcoming events */}
 			<div className="w-full h-full pt-24">
-				<h1 className="text-white font-bold text-6xl flex gap-1"><IoMdArrowDropright className="text-accent" /> Our {toggle ? "Upcoming" : "Past"} Events</h1>
+				<h1 className="text-white font-bold text-6xl max-xl:text-4xl flex gap-1"><IoMdArrowDropright className="text-accent" /> Our {toggle ? "Upcoming" : "Past"} Events</h1>
 
 				<div className="flex gap-4 w-full justify-start items-center pt-12">
 					<div className="w-48 h-16 flex justify-center items-center border-2 border-light_text p-2 rounded-lg bg-primary hover:border-accent transition-all duration-200 cursor-pointer hover:text-accent text-light_text" onClick={() => setToggle(true)}>
