@@ -48,7 +48,7 @@ export default function EventsPage({ params }) {
 						<div className="w-full h-fit bg-primary">
 							<div className="p-8 flex flex-col gap-8">
 								<div className="w-full h-fit flex justify-between">
-									<h1 className="text-white font-bold text-6xl flex gap-1">{event.title}</h1>
+									<h1 className="text-white font-bold text-6xl max-xl:text-4xl flex gap-1">{event.title}</h1>
 									<Link href={event.link}>
 										<CiLink className="w-16 h-16 text-light_text text-2xl font-bold cursor-pointer transition-all hover:scale-110 hover:text-white duration-200" />
 									</Link>
@@ -57,10 +57,10 @@ export default function EventsPage({ params }) {
 
 								<hr className="text-light_text" />
 
-								<div className="w-full h-fit">
-									<h1 className="flex gap-4 text-light_text text-3xl"><BsCalendar2Date />{event.date}</h1>
-									<h1 className="flex gap-4 text-light_text text-3xl"><IoTimeOutline />{event.time}</h1>
-									<h1 className="flex gap-4 text-light_text text-3xl"><CiLocationArrow1 />{event.location}</h1>
+								<div className="w-full h-fit ">
+									<h1 className="flex gap-4 text-light_text text-3xl max-xl:text-xl"><BsCalendar2Date />{event.date}</h1>
+									<h1 className="flex gap-4 text-light_text text-3xl max-xl:text-xl"><IoTimeOutline />{event.time}</h1>
+									<h1 className="flex gap-4 text-light_text text-3xl max-xl:text-xl"><CiLocationArrow1 />{event.location}</h1>
 
 									<h1 className="text-light_text text-2xl pt-8">{event.description}</h1>
 
