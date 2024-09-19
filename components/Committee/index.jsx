@@ -60,7 +60,7 @@ export function Committee({data, detailed=false}) {
 			{
 				data.map((member, index) => {
 					return (
-						<div key={index} className="w-full h-full flex flex-col justify-between gap-4 p-8 rounded-lg bg-primary bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary from-0% to-secondary to-100% border border-background hover:border-accent transition-all duration-200 cursor-pointer">
+						<div key={index} className="w-full h-full flex flex-col justify-around gap-4 p-8 rounded-lg bg-primary bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary from-0% to-secondary to-100% border border-background hover:border-accent transition-all duration-200 cursor-pointer">
 							<div className="flex gap-8">
 								<Image src={member.image} width={100} height={100} alt="user" className="w-44 h-44 rounded-xl border border-white aspect-square object-cover" unoptimized />
 
@@ -71,7 +71,7 @@ export function Committee({data, detailed=false}) {
 							</div>
 
 							<div className="w-full h-full flex flex-col gap-16 justify-between items-center text-light_text">
-								<h1 className="text-light_text text-lg max-xl:text-sm">{member.description}</h1>
+								<h1 className="text-light_text text-lg max-xl:text-sm text-wrap">{member.description}</h1>
 								<div className="w-full flex justify-start gap-3 pt-3">
 									{
 										member.links.map((link, index) => {
