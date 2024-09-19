@@ -14,6 +14,8 @@ import data from "@/data/events.json";
 
 // hooks
 import { useEffect, useState } from "react";
+import Script from "next/script";
+import { FixrEvent } from "@/components/FixrEvent";
 
 export default function Events() {
 
@@ -70,9 +72,12 @@ export default function Events() {
 			{/* <div className="w-full h-full pt-12">
 				<h1 className="text-white font-bold text-6xl flex gap-1"><IoMdArrowDropright className="text-accent" /> Our Calendar</h1>
 			</div> */}
+			<div className="w-full h-full pt-12">
+				<FixrEvent />
+			</div>
 
 			{/* next event */}
-			{
+			{/* {
 				upcoming.length > 0 && (
 					<div className="min-h-80 w-full h-full">
 						<h1 className="text-white font-bold text-6xl max-xl:text-4xl flex gap-1"><IoMdArrowDropright className="text-accent" /> Next Event</h1>
@@ -153,7 +158,7 @@ export default function Events() {
 						</div>
 					</div>
 				)
-			}
+			} */}
 
 			{/* list of upcoming events */}
 			<div className="w-full h-full pt-24">
