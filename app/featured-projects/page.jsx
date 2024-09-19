@@ -67,18 +67,18 @@ export default function FeaturedProjects() {
 				<div className="bg-primary p-12 border-2 border-secondary rounded-xl flex flex-col gap-8">
 					<div className="flex justify-between">
 						<div className="flex flex-col gap-1">
-							<h1 className="text-white text-6xl font-bold">{winner.title}</h1>
-							<h1 className="text-light_text text-xl font-semibold">{winner.languages}</h1>
+							<h1 className="text-white text-6xl max-xl:text-2xl font-bold">{winner.title}</h1>
+							<h1 className="text-light_text text-xl max-xl:text-lg font-semibold">{winner.languages}</h1>
 						</div>
 
 
-						<h1 className="text-light_text text-2xl font-bold">By {winner.author}</h1>
+						<h1 className="text-light_text text-2xl max-xl:text-lg font-bold">By {winner.author}</h1>
 
 					</div>
 
 					<div className="flex max-lg:flex-col gap-8">
 						<div className="w-full">
-							<h1 className="text-light_text text-2xl font-bold">{winner.description}</h1>
+							<h1 className="text-light_text text-2xl max-xl:text-sm font-bold">{winner.description}</h1>
 						</div>
 
 						<Image src={winner.image ? winner.image : "images/filler.png"} width={400} height={400} alt="project" className="w-1/3 max-lg:w-full h-full object-contain rounded-xl" unoptimized />

@@ -18,21 +18,21 @@ export function TopBar() {
 			</Link>
 
 			<div className="h-full w-full flex gap-4 justify-center items-center">
-				<Link href={"/featured-projects"} className="xl:w-fit h-full max-xl:aspect-square p-4 rounded-lg border border-secondary bg-primary flex justify-center items-center hover:border-accent cursor-pointer transition-all duration-200">
+				<Link href={"/featured-projects"} className="xl:w-fit xl:h-full max-xl:w-8 max-xl:h-8 max-xl:aspect-square p-4 rounded-lg border border-secondary bg-primary flex justify-center items-center hover:border-accent cursor-pointer transition-all duration-200">
 					<div className="flex gap-1 justify-center items-center">
 						<h1 className="text-light_text max-xl:hidden font-bold">Feature Your Project</h1>
 						<PiScroll className="text-light_text " />
 					</div>
 				</Link>
 
-				<Link href={"/committee"} className="xl:w-fit h-full max-xl:aspect-square p-4 rounded-lg border border-secondary bg-primary flex justify-center items-center hover:border-accent cursor-pointer transition-all duration-200">
+				<Link href={"/committee"} className="xl:w-fit xl:h-full max-xl:w-8 max-xl:h-8 max-xl:aspect-square rounded-lg border border-secondary bg-primary flex justify-center items-center hover:border-accent cursor-pointer transition-all duration-200">
 					<div className="flex gap-1 justify-center items-center">
 						<h1 className="text-light_text max-xl:hidden font-bold">Committee</h1>
 						<BsFillPeopleFill className="text-light_text" size={24} />
 					</div>
 				</Link>
 
-				<Link href={"/events"} className="xl:w-fit h-full max-xl:aspect-square p-4 rounded-lg border border-secondary bg-primary flex justify-center items-center hover:border-accent cursor-pointer transition-all duration-200">
+				<Link href={"/events"} className="xl:w-fit xl:h-full max-xl:w-8 max-xl:h-8 max-xl:aspect-square rounded-lg border border-secondary bg-primary flex justify-center items-center hover:border-accent cursor-pointer transition-all duration-200">
 					<div className="flex gap-1 justify-center items-center">
 						<h1 className="text-light_text max-xl:hidden font-bold">Events</h1>
 						<LuPartyPopper className="text-light_text" size={24} />
@@ -40,7 +40,7 @@ export function TopBar() {
 
 				</Link>
 
-				<Link href={"https://my.exeterguild.com/groups/QRM97/computer-science-society/memberships"} target={"_blank"} className="xl:w-fit h-full max-xl:aspect-square p-4 rounded-lg border border-secondary bg-primary flex justify-center items-center hover:border-accent cursor-pointer transition-all duration-200">
+				<Link href={"https://my.exeterguild.com/groups/QRM97/computer-science-society/memberships"} target={"_blank"} className="xl:w-fit xl:h-full max-xl:w-8 max-xl:h-8 max-xl:aspect-square rounded-lg border border-secondary bg-primary flex justify-center items-center hover:border-accent cursor-pointer transition-all duration-200">
 					<div className="flex gap-1 justify-center items-center">
 						<h1 className="text-light_text max-xl:hidden font-bold">Memberships</h1>
 						<FiExternalLink className="text-light_text" size={24} />
