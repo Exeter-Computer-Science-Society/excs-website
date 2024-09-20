@@ -20,7 +20,7 @@ export function Map({ longitude, latitude }) {
 		console.log("here too")
 
 		console.log(process.env.REACT_APP_MAP_API_KEY)
-		maptilersdk.config.apiKey = "GDGyCFQUccD1p3pBDUip"
+		maptilersdk.config.apiKey = null
 
 		let region = {
 			bounds:
