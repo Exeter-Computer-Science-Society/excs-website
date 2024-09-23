@@ -4,6 +4,7 @@ import { IoMdArrowDropright } from "react-icons/io";
 import new_committee from "@/data/committee.json"
 import old_committee from "@/data/past/committee-2023-2024.json"
 
+
 export default function CommitteePage() {
 	return (
 		<div className="w-full h-full pt-56 pl-[var(--page-padding-left)] pr-[var(--page-padding-right)]">
