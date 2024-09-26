@@ -13,7 +13,6 @@ export default function CommitteePage() {
 
 			<h1 className="text-light_text text-4xl font-bold flex gap-1 pt-12"><IoMdArrowDropright className="text-accent"/>Committee 2023/2024</h1>
 			<Committee data={old_committee} detailed={false} />
-
 		</div>
 	)
 }
