@@ -143,7 +143,12 @@ run file here
 ```
 
 - please also update the winning project using the same format every month if you are doing this!
-- test addition at the bottom
-- another test
 
+## Future Features Ideas
+- Reformat the events icons in the `/events` page
+- Add images to past events so people can see what our events look like
+- maybe divide past events and incoming events into two different sections for better representation
+- maybe remove incoming events as the fixr tickets ommit this
+- integrate the new hack south west website as a subdomain
+- 
 
