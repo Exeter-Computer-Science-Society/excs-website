@@ -3,17 +3,14 @@
 import * as maptilersdk from '@maptiler/sdk'
 import "@maptiler/sdk/dist/maptiler-sdk.css"
 import { MapNotAvailable } from "./MapNotAvailable";
-// import { useMyRef } from "@/contexts/refContext";
 import { useEffect, useRef } from 'react';
 
 export function Map({ longitude, latitude }) {
-
-
-	// const { map, mapContainer } = useMyRef();
 	const map = useRef(null);
 	const mapContainer = useRef(null);
 
 	useEffect(() => {
+		
 		// if no longitude or latitude, return MapNotAvailable component
 		if (!longitude || !latitude) return <MapNotAvailable />;
 

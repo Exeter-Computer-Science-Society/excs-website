@@ -5,7 +5,6 @@ import "./globals.css"
 // components
 import { Footer } from "@/components/Footer"
 import { TopBar } from "@/components/TopBar"
-import { RefProvider } from "@/contexts/refContext"
 
 // hooks
 
@@ -33,9 +32,7 @@ export default function RootLayout({ children }) {
 			<body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background`} >
 				<TopBar />
 
-				<RefProvider>
 					{children}
-				</RefProvider>
 
 				<Footer />
 			</body>
