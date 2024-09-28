@@ -1,23 +1,21 @@
 'use client'
 
-import { useEffect, useRef, useState } from "react";
-
 import * as maptilersdk from '@maptiler/sdk'
 import "@maptiler/sdk/dist/maptiler-sdk.css"
+import { MapNotAvailable } from "./MapNotAvailable";
+// import { useMyRef } from "@/contexts/refContext";
+import { useEffect, useRef } from 'react';
 
 export function Map({ longitude, latitude }) {
-	const mapContainer = useRef(null);
+
+
+	// const { map, mapContainer } = useMyRef();
 	const map = useRef(null);
-	const [zoom] = useState(12);
+	const mapContainer = useRef(null);
 
 	useEffect(() => {
-
-		if (map.current) return; // stops map from intializing more than once
-		console.log("thing")
-		if (!longitude || !latitude) return;
-		console.log("here")
-		if (!mapContainer.current) return;
-		console.log("here too")
+		// if no longitude or latitude, return MapNotAvailable component
+		if (!longitude || !latitude) return <MapNotAvailable />;
 
 		maptilersdk.config.apiKey = process.env.REACT_APP_MAP_API_KEY
 
@@ -26,7 +24,7 @@ export function Map({ longitude, latitude }) {
 				[[-40, 20], // Southwest coordinates
 				[42.75, 63]],
 			center: [-1.947754, 51.911034],
-			zoom: 3.75,
+			zoom: 5,
 		}
 
 		map.current = new maptilersdk.Map({
@@ -49,8 +47,7 @@ export function Map({ longitude, latitude }) {
 			.setLngLat({ lon: longitude, lat: latitude })
 			.on('click', () => console.log("open"))
 			.addTo(map.current);
-
-	}, [zoom, latitude, longitude]);
+	}, [longitude, latitude])
 
 
 	return mapContainer ? (
@@ -58,8 +55,6 @@ export function Map({ longitude, latitude }) {
 			<div ref={mapContainer} className="absolute w-full h-full" />
 		</div>
 	) : (
-		<div>
-			<h1 className="text-white text-xl font-bold">Map not available</h1>
-		</div>
+		<MapNotAvailable />
 	)
 }

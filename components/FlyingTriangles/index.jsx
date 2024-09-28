@@ -151,16 +151,12 @@ class Point {
 
 export function FlyingTriangles() {
 
-	const [created, setCreated] = useState(false)
-
 	useEffect(() => {
 		if (window.location.pathname !== "/") return
 
-		if (!created) {
-			console.log("creating")
-			new Moving_Points(document.querySelector("#hero-canvas"), 30)
-			setCreated(true)
-		}
+		
+		new Moving_Points(document.querySelector("#hero-canvas"), 30)
+		
 	}, [])
 
 	return (
