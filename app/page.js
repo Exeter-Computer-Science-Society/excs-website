@@ -26,7 +26,7 @@ export default function Home() {
 				<FlyingTriangles />
 
 				<div className="w-full h-screen flex flex-col justify-center items-center gap-12 pb-72 animate-[infoEnter_1s_forwards_0.1s]">
-					<Link href={"https://www.exeter.ac.uk/"} className="w-fit h-fit border border-light_text flex gap-8 bg-primary justify-center items-center p-4 z-40 cursor-pointer hover:scale-105 hover:border-white transition-all duration-200 rounded-lg">
+					<Link href={"https://www.exeter.ac.uk/"} target="_blank" className="w-fit h-fit border border-light_text flex gap-8 bg-primary justify-center items-center p-4 z-40 cursor-pointer hover:scale-105 hover:border-white transition-all duration-200 rounded-lg">
 						<Image src="images/icons/exeter-no-bg.png" width={50} height={50} alt={"logig"} className="bg-white rounded-full" unoptimized />
 						<h1 className="text-light_text text-3xl max-xl:text-xl font-extrabold hover:text-white transition-all duration-200">University of Exeter</h1>
 					</Link>
@@ -52,11 +52,11 @@ export default function Home() {
 				</div>
 
 				<div className="h-fit w-full flex flex-wrap gap-4 justify-start items-center">
-					<Link href={"https://www.instagram.com/exetercompsci/"} className="w-fit h-full p-4 rounded-lg border border-secondary bg-primary flex justify-center items-center hover:border-accent cursor-pointer transition-all duration-200">
+					<Link href={"https://www.instagram.com/exetercompsci/"} target="_blank" className="w-fit h-full p-4 rounded-lg border border-secondary bg-primary flex justify-center items-center hover:border-accent cursor-pointer transition-all duration-200">
 						<h1 className="text-light_text font-bold flex justify-center items-center gap-2"><Image src="images/icons/instagram.svg" width={20} height={20} alt={"instagram"} unoptimized />Instagram</h1>
 					</Link>
 
-					<Link href={"https://www.facebook.com/ExCompSci/"} className="w-fit h-full p-4 rounded-lg border border-secondary bg-primary flex justify-center items-center hover:border-accent cursor-pointer transition-all duration-200">
+					<Link href={"https://www.facebook.com/ExCompSci/"} target="_blank" className="w-fit h-full p-4 rounded-lg border border-secondary bg-primary flex justify-center items-center hover:border-accent cursor-pointer transition-all duration-200">
 						<h1 className="text-light_text font-bold flex justify-center items-center gap-2"><Image src="images/icons/facebook.svg" width={20} height={20} alt={"facebook"} unoptimized />Facebook</h1>
 					</Link>
 
@@ -64,11 +64,11 @@ export default function Home() {
 						<h1 className="text-light_text font-bold flex justify-center items-center gap-2"><Image src="images/icons/linkedin.svg" width={20} height={20} alt={"linkedin"} unoptimized />LinkedIn</h1>
 					</Link>
 
-					<Link href={"https://github.com/Exeter-Computer-Science-Society"} className="w-fit h-full p-4 rounded-lg border border-secondary bg-primary flex justify-center items-center hover:border-accent cursor-pointer transition-all duration-200">
+					<Link href={"https://github.com/Exeter-Computer-Science-Society"} target="_blank" className="w-fit h-full p-4 rounded-lg border border-secondary bg-primary flex justify-center items-center hover:border-accent cursor-pointer transition-all duration-200">
 						<h1 className="text-light_text font-bold flex justify-center items-center gap-2"><Image src="images/icons/github.svg" width={20} height={20} alt={"github"} unoptimized />Github</h1>
 					</Link>
 
-					<Link href={"https://www.discord.gg/QWvPy3VSrZ"} className="w-fit h-full p-4 rounded-lg border border-secondary bg-primary flex justify-center items-center hover:border-accent cursor-pointer transition-all duration-200">
+					<Link href={"https://www.discord.gg/QWvPy3VSrZ"} target="_blank" className="w-fit h-full p-4 rounded-lg border border-secondary bg-primary flex justify-center items-center hover:border-accent cursor-pointer transition-all duration-200">
 						<h1 className="text-light_text font-bold flex justify-center items-center gap-2"><Image src="images/icons/discord.svg" width={20} height={20} alt={"discord"} unoptimized />Discord</h1>
 					</Link>
 				</div>
