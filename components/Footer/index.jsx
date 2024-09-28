@@ -16,7 +16,7 @@ export function Footer() {
 							or
 						</div>
 
-						<Link href={"https://github.com/Exeter-Computer-Science-Society/excs-website-2"} target={"_blank"} className="text-white underline cursor-pointer hover:text-accent transition-all duration-200">
+						<Link href={"https://github.com/Exeter-Computer-Science-Society/excs-website"} target={"_blank"} className="text-white underline cursor-pointer hover:text-accent transition-all duration-200">
 							Fix it yourself!
 						</Link>
 					</h1>
