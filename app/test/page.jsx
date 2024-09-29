@@ -1,7 +1,9 @@
-import {FixrEvent} from "@/components/FixrEvent";
+
+import { ImageCarousel } from "@/components/ImageCarousel";
 
 export default function Test() {
+	
 	return (
-		<FixrEvent />
+		<ImageCarousel />
 	)
 }

@@ -150,5 +150,4 @@ run file here
 - maybe divide past events and incoming events into two different sections for better representation
 - maybe remove incoming events as the fixr tickets ommit this
 - integrate the new hack south west website as a subdomain
-- 
 

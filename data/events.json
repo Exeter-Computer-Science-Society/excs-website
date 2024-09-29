@@ -27,6 +27,7 @@
 		"link": "https://www.instagram.com/exetercompsci/",
 		"tags": ["social"],
 		"longitude": -3.525598,
-		"latitude":  50.722965
+		"latitude":  50.722965,
+		"event_images": ["images/events/barn-social/1.jpeg", "images/events/barn-social/2.jpeg", "images/events/barn-social/3.jpeg", "images/events/barn-social/4.jpeg", "images/events/barn-social/5.jpeg"]
 	}
 ]

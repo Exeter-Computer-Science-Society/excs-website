@@ -16,6 +16,7 @@ import data from "@/data/events.json";
 import { useEffect, useState } from "react";
 import Script from "next/script";
 import { FixrEvent } from "@/components/FixrEvent";
+import { PastEvents } from "@/components/Events/PastEvents";
 
 export default function Events() {
 
@@ -55,9 +56,10 @@ export default function Events() {
 
 
 	return (
-		<div className="w-screen h-full pl-[var(--page-padding-left)] pr-[var(--page-padding-right)] flex flex-col justify-start items-center pt-96">
+		<div className="w-screen h-full pl-[var(--page-padding-left)] pr-[var(--page-padding-right)] flex flex-col justify-start items-center max-xl:pt-72 pt-40">
+
 			{/* Heading */}
-			<div className="w-full h-screen flex max-xl:flex-col justify-center items-center gap-20 pb-72">
+			<div className="w-full h-screen flex max-xl:flex-col justify-center items-center gap-20 pb-96">
 				<div className="w-full flex flex-col gap-4">
 					<h1 className="text-white font-bold text-4xl flex gap-1"><IoMdArrowDropright className="text-accent" /> EXCS Social Events</h1>
 					<h1 className="text-light_text font-bold text-3xl">Take a look at our incredible social schedule for this year!</h1>
@@ -68,100 +70,21 @@ export default function Events() {
 				</div>
 			</div>
 
+
 			{/* calendar */}
 			{/* <div className="w-full h-full pt-12">
 				<h1 className="text-white font-bold text-6xl flex gap-1"><IoMdArrowDropright className="text-accent" /> Our Calendar</h1>
 			</div> */}
+
+
+			{/* the fixr api event list */}
 			<div className="w-full h-full pt-12">
 				<FixrEvent />
 			</div>
 
-			{/* next event */}
-			{/* {
-				upcoming.length > 0 && (
-					<div className="min-h-80 w-full h-full">
-						<h1 className="text-white font-bold text-6xl max-xl:text-4xl flex gap-1"><IoMdArrowDropright className="text-accent" /> Next Event</h1>
-
-						<div className="w-full h-fit flex max-xl:flex-col justify-start rounded-r-lg border border-background hover:border-accent group">
-							<div className="w-fit h-full flex items-center">
-								<Image src={upcoming[0].image} width={1000} height={600} alt={"solo programming"} className="object-contain" unoptimized />
-							</div>
-							{
-								!mapOpen ? (
-									<div className="w-full min-h-full p-8 rounded-r-md flex flex-col gap-2 bg-primary justify-between">
-										<div className="w-full">
-											<h1 className="text-white text-6xl max-lg:text-4xl font-extrabold">{upcoming[0].title}</h1>
-											<div className="flex gap-2">
-												<h1 className="text-light_text text-2xl font-bold">{upcoming[0].date}</h1>
-												<h1 className="text-light_text text-2xl font-bold">{upcoming[0].time}</h1>
-											</div>
-
-											<h1 className="text-light_text text-2xl pt-4 font-bold">{upcoming[0].description}</h1>
-										</div>
-
-										<div className="w-full flex justify-end gap-4">
-											{
-												upcoming[0].link !== "" && (
-													<Link href={upcoming[0].link}>
-														<CiLink className="w-16 h-16 text-light_text text-2xl font-bold cursor-pointer transition-all hover:scale-110 hover:text-white duration-200" />
-													</Link>
-												)
-											}
-
-											<button className="w-fit h-full p-4 rounded-lg border border-secondary bg-primary flex justify-center items-center hover:border-accent cursor-pointer transition-all duration-200" onClick={() => setMapOpen(true)}>
-												<h1 className="text-light_text font-bold flex justify-center items-center gap-2">Open Map</h1>
-											</button>
-
-											{
-												upcoming[0].fixr !== "" ? (
-													<Link href={upcoming[0].fixr} target="_blank" className="w-fit h-full p-4 rounded-lg border border-secondary bg-primary flex justify-center items-center hover:border-accent cursor-pointer transition-all duration-200">
-														<h1 className="text-light_text font-bold flex justify-center items-center gap-2">Buy Tickets</h1>
-													</Link>
-												) : (
-													<div className="w-fit h-full p-4 rounded-lg border border-secondary bg-primary flex justify-center items-center hover:border-accent cursor-pointer transition-all duration-200">
-														<h1 className="text-light_text font-bold flex justify-center items-center gap-2">Unreleased</h1>
-													</div>
-												)
-											}
-
-										</div>
-									</div>
-								) : (
-									<div className="w-full min-h-full rounded-r-md bg-primary flex">
-										<Map longitude={upcoming[0].longitude} latitude={upcoming[0].latitude} />
-
-										<div className="flex flex-col justify-start items-center gap-4 p-8">
-											<button className="w-full h-16 text-nowrap p-4 rounded-lg border border-secondary bg-primary flex justify-center items-center hover:border-accent cursor-pointer transition-all duration-200" onClick={() => setMapOpen(false)}>
-												<h1 className="text-light_text font-bold flex justify-center items-center gap-2">Close Map</h1>
-											</button>
-
-											{
-												upcoming[0].location_link !== "" && (
-													<Link href={upcoming[0].location_link} className="w-full h-16 text-nowrap p-4 rounded-lg border border-secondary bg-primary flex justify-center items-center hover:border-accent cursor-pointer transition-all duration-200">
-														<h1 className="text-light_text font-bold flex justify-center items-center gap-2">Open Google</h1>
-													</Link>
-												)
-											}
-
-											{
-												upcoming[0].fixr !== "" && (
-													<Link href={upcoming[0].fixr} className="w-full h-16 text-nowrap p-4 rounded-lg border border-secondary bg-primary flex justify-center items-center hover:border-accent cursor-pointer transition-all duration-200">
-														<h1 className="text-light_text font-bold flex justify-center items-center gap-2">Buy Tickets</h1>
-													</Link>
-												)
-											}
-
-										</div>
-									</div>
-								)
-							}
-						</div>
-					</div>
-				)
-			} */}
 
 			{/* list of upcoming events */}
-			<div className="w-full h-full pt-24">
+			{/* <div className="w-full h-full pt-24">
 				<h1 className="text-white font-bold text-6xl max-xl:text-4xl flex gap-1"><IoMdArrowDropright className="text-accent" /> Our {toggle ? "Upcoming" : "Past"} Events</h1>
 
 				<div className="flex gap-4 w-full justify-start items-center pt-12">
@@ -238,6 +161,13 @@ export default function Events() {
 						)
 					}
 				</div>
+			</div> */}
+
+			{/* list of past events */}
+			<div className="w-full h-full pt-24">
+				<h1 className="text-white font-bold text-6xl max-xl:text-4xl flex gap-1"><IoMdArrowDropright className="text-accent" /> Our Past Events</h1>
+
+				<PastEvents />
 			</div>
 		</div>
 	)
