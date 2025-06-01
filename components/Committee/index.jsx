@@ -15,7 +15,7 @@ export function Committee({data, detailed=false}) {
 				data.map((member, index) => {
 					return (
 						<div key={index} className="w-fit h-full flex flex-col justify-center items-center gap-1 p-4 rounded-lg bg-primary bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary from-0% to-secondary to-100%">
-							<Image src={member.image} width={300} height={300} alt="user" className="rounded-xl border border-white object-cover aspect-square" unoptimized />
+							<Image src={member.image} width={300} height={300} alt="user" className="w-56 rounded-xl border border-white object-cover aspect-square" unoptimized />
 
 							<div className="w-full h-fit flex flex-col justify-center items-center text-light_text">
 								<h1 className="text-white font-bold text-2xl">{member.position}</h1>
