@@ -7,11 +7,25 @@
 		"link": "/committee"
 	},
 	{
+		"name": "Raspberry Pi Cluster",
+		"description": "Join us in building a Raspberry Pi cluster for fun and learning!",
+		"footnote": "",
+		"image": "images/cluster.jpg",
+		"link": "/events"
+	},
+	{
+		"name": "8-Bit Computer",
+		"description": "Join us in building a retro 8-bit computer from scratch!",
+		"footnote": "",
+		"image": "images/8bit.jpeg",
+		"link": "/events"
+	},
+	{
 		"name": "Hack South West",
 		"description": "Our inter-uni Hackathon. Compete with a team for a prize!",
 		"footnote": "Exeter . Bristol . Bath . Cardiff . Plymouth",
 		"image": "images/hack-sw-og-bg.png",
-		"link": "https://hack-south-west.excs.uk"
+		"link": "https://hack-sw-2--hackathon-website-c451a.europe-west4.hosted.app/"
 	},
 	{
 		"name": "Feature Your Personal Project",

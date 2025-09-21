@@ -9,7 +9,7 @@ export function NewList() {
 			{
 				data.map((thing, index) => {
 					return (
-						<Link href={thing.link} key={index} className="flex max-xl:flex-col gap-4 w-full justify-between bg-primary p-8 rounded-xl border border-secondary border-solid hover:border-accent cursor-pointer transition-all duration-200">
+						<Link href={thing.link} key={index} target={"_blank"} className="flex max-xl:flex-col gap-4 w-full justify-between bg-primary p-8 rounded-xl border border-secondary border-solid hover:border-accent cursor-pointer transition-all duration-200">
 							<div className="w-1/2 max-xl:w-full min-h-full flex flex-col">
 								<div className="w-full h-fit flex justify-start">
 									<div className="h-full w-fit px-8">

@@ -94,9 +94,16 @@ export default function Home() {
 			<div className="flex flex-col pt-72">
 				<div className="flex flex-col justify-between h-fit">
 					<h1 className="text-3xl font-bold text-light_text flex"><IoMdArrowDropright className="text-accent" />Our Sponsors</h1>
-					<Link href={"https://shecancode.io"} target={"_blank"} className="w-fit h-fit text-xl font-bold text-accent cursor-pointer underline">
-						<Image src="images/SheCanCode.png" width={400} height={400} alt={"SheCanCode"} unoptimized />
-					</Link>
+					<div className="w-full h-fit flex flex-wrap justify-start items-center gap-8 pt-8 pb-4">
+						<Link href={"https://techexeter.uk/"} target={"_blank"} className="w-32 h-32 text-xl font-bold text-accent cursor-pointer underline">
+							<Image src="images/sponsors/techexeter.png" width={400} height={400} alt={"Tech Exeter"} unoptimized />
+						</Link>
+
+						<Link href={"https://luma.com/kitumpid"} target={"_blank"} className="w-32 h-32 text-xl font-bold text-accent cursor-pointer underline">
+							<Image src="images/sponsors/mintsw.webp" width={400} height={400} alt={"MintSw"} unoptimized />
+						</Link>
+					</div>
+					
 
 					<Link href={"mailto:excs@groups.exeterguild.com"} className="w-fit h-fit text-xl font-bold text-accent cursor-pointer underline">
 						<h1>Interested in Sponsoring Us?</h1>

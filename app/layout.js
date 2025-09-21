@@ -24,6 +24,10 @@ const geistMono = localFont({
 export const metadata = {
 	title: "Exeter Computer Science Society",
 	description: "Our societies home page",
+	icons: {
+		icon: "/favicon.ico",
+		shortcut: "/favicon.ico",
+	}
 }
 
 export default function RootLayout({ children }) {
