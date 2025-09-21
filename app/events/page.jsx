@@ -164,11 +164,11 @@ export default function Events() {
 			</div> */}
 
 			{/* list of past events */}
-			<div className="w-full h-full pt-24">
+			{/* <div className="w-full h-full pt-24">
 				<h1 className="text-white font-bold text-6xl max-xl:text-4xl flex gap-1"><IoMdArrowDropright className="text-accent" /> Our Past Events</h1>
 
 				<PastEvents />
-			</div>
+			</div> */}
 		</div>
 	)
 }
