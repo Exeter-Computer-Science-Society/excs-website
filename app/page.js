@@ -94,13 +94,17 @@ export default function Home() {
 			<div className="flex flex-col pt-72">
 				<div className="flex flex-col justify-between h-fit">
 					<h1 className="text-3xl font-bold text-light_text flex"><IoMdArrowDropright className="text-accent" />Our Sponsors</h1>
-					<div className="w-full h-fit flex flex-wrap justify-start items-center gap-8 pt-8 pb-4">
-						<Link href={"https://techexeter.uk/"} target={"_blank"} className="w-32 h-32 text-xl font-bold text-accent cursor-pointer underline">
-							<Image src="images/sponsors/techexeter.png" width={400} height={400} alt={"Tech Exeter"} unoptimized />
+					<div className="w-full max-h-full flex flex-wrap justify-start items-center gap-8 pt-8 pb-4">
+						<Link href={"https://techexeter.uk/"} target={"_blank"} className="w-32 h-fit text-xl font-bold text-accent cursor-pointer underline">
+							<Image src="images/sponsors/techexeter.png" className="object-contain w-full h-fit" width={400} height={400} alt={"Tech Exeter"} unoptimized />
 						</Link>
 
-						<Link href={"https://luma.com/kitumpid"} target={"_blank"} className="w-32 h-32 text-xl font-bold text-accent cursor-pointer underline">
+						<Link href={"https://luma.com/kitumpid"} target={"_blank"} className="w-32 h-full text-xl font-bold text-accent cursor-pointer underline">
 							<Image src="images/sponsors/mintsw.webp" width={400} height={400} alt={"MintSw"} unoptimized />
+						</Link>
+
+                        <Link href={"https://pplx.ai/wiktor-wiejak"} target={"_blank"} className="h-full text-xl font-bold text-accent cursor-pointer underline">
+							<Image src="images/sponsors/perplexity.svg" width={400} height={400} alt={"PPLX"} unoptimized />
 						</Link>
 					</div>
 					
