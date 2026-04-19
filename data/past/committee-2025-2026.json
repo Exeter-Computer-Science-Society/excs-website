@@ -1,0 +1,154 @@
+[
+    {
+        "name": "Wiktor Wiejak",
+        "position": "President",
+        "description": "Hi! I am thrilled to be the President of EXCS this year. As the President, my goals are to create a vibrant community where you can connect with like-minded peers, enjoy engaging social events, and also stay focused on your academic and career aspirations. If you have any questions, feel free to contact me, or any of the other members :)",
+        "image": "images/people/wiktor.jpeg",
+        "links": [
+            {
+                "type": "linkedin",
+                "url": "https://www.linkedin.com/in/wiktor-wiejak/"
+            },
+            {
+                "type": "github",
+                "url": "https://github.com/inspizzz"
+            },
+            {
+                "type": "other",
+                "url": "https://wiktor.uk/"
+            }
+        ]
+    },
+    {
+        "name": "Nehir Yurtsever",
+        "position": "Vice President",
+        "description": "I'm excited to step into the role of Vice President for our Computer Science Society. This year, my mission is to amplify your voice and ensure that every member has the support and opportunities they need to thrive. My focus will be on enhancing our collective learning experiences, facilitating industry connections, and promoting collaboration across all levels of expertise.",
+        "image": "images/people/nehir.jpeg",
+        "links": [
+            {
+                "type": "linkedin",
+                "url": "https://www.linkedin.com/in/nehir-yurtsever-2932a0233/"
+            }
+        ]
+    },
+    {
+        "name": "Crystal Tsui",
+        "position": "Treasurer",
+        "description": "",
+        "image": "images/people/crystal.jpeg",
+        "links": [
+            {
+                "type": "linkedin",
+                "url": "https://www.linkedin.com/in/crystal-tsui-8997582a7/"
+            }
+        ]
+    },
+    {
+        "name": "Raghd Abdalla",
+        "position": "Academic Director",
+        "description": "",
+        "image": "images/people/raghd.jpeg",
+        "links": [
+            {
+                "type": "linkedin",
+                "url": "https://www.linkedin.com/in/"
+            },
+            {
+                "type": "github",
+                "url": "https://www.github.com/"
+            }
+        ]
+    },
+    {
+        "name": "Darsshan Palaram",
+        "position": "Social Director",
+        "description": "",
+        "image": "images/people/darsshan.jpeg",
+        "links": [
+            {
+                "type": "linkedin",
+                "url": "https://www.linkedin.com/in/"
+            },
+            {
+                "type": "github",
+                "url": "https://www.github.com/"
+            }
+        ]
+    },
+    {
+        "name": "Dariush Tomlinson",
+        "position": "Social Director",
+        "description": "",
+        "image": "images/people/dari.jpeg",
+        "links": [
+            {
+                "type": "linkedin",
+                "url": "https://www.linkedin.com/in/"
+            },
+            {
+                "type": "github",
+                "url": "https://www.github.com/"
+            }
+        ]
+    },
+    {
+        "name": "Charlie Winders",
+        "position": "Hackathon Director",
+        "description": "",
+        "image": "images/people/charlie.jpeg",
+        "links": [
+            {
+                "type": "linkedin",
+                "url": "https://www.linkedin.com/in/"
+            },
+            {
+                "type": "github",
+                "url": "https://www.github.com/"
+            }
+        ]
+    },
+    {
+        "name": "Arjun Modi",
+        "position": "Sports Director",
+        "description": "",
+        "image": "images/people/arjun.jpeg",
+        "links": [
+            {
+                "type": "linkedin",
+                "url": "https://www.linkedin.com/in/arjunmodi04/"
+            }
+        ]
+    },
+    {
+        "name": "Tasbir Rahaman",
+        "position": "Careers Director",
+        "description": "",
+        "image": "images/people/tasbir.jpeg",
+        "links": [
+            {
+                "type": "linkedin",
+                "url": "https://www.linkedin.com/in/tasbir-rahaman-a10252265/"
+            },
+            {
+                "type": "github",
+                "url": "https://github.com/tasbirr"
+            },
+            {
+                "type": "other",
+                "url": "https://tasbir-rahaman.vercel.app/"
+            }
+        ]
+    },
+    {
+        "name": "Cody Tam",
+        "position": "Marketing Director",
+        "description": "",
+        "image": "images/people/cody.jpeg",
+        "links": [
+            {
+                "type": "linkedin",
+                "url": "https://www.linkedin.com/in/cody-lokyitam"
+            }
+        ]
+    }
+]

@@ -102,10 +102,6 @@ export default function Home() {
 						<Link href={"https://luma.com/kitumpid"} target={"_blank"} className="w-32 h-full text-xl font-bold text-accent cursor-pointer underline">
 							<Image src="images/sponsors/mintsw.webp" width={400} height={400} alt={"MintSw"} unoptimized />
 						</Link>
-
-                        <Link href={"https://pplx.ai/wiktor-wiejak"} target={"_blank"} className="h-full text-xl font-bold text-accent cursor-pointer underline">
-							<Image src="images/sponsors/perplexity.svg" width={400} height={400} alt={"PPLX"} unoptimized />
-						</Link>
 					</div>
 					
 

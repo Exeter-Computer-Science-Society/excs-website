@@ -46,12 +46,6 @@ export function TopBar() {
 						<FiExternalLink className="text-light_text" size={24} />
 					</div>
 				</Link>
-
-				<Link href={"https://pplx.ai/wiktor-wiejak"} target={"_blank"} className="xl:w-fit xl:h-full max-xl:w-8 max-xl:h-8 max-xl:aspect-square rounded-lg border border-secondary bg-primary flex justify-center items-center hover:border-accent cursor-pointer transition-all duration-200">
-					<div className="w-full h-full flex gap-1 justify-center items-center">
-						<Image src="images/sponsors/perplexity.svg" alt="Perplexity" width={24} height={24} className="w-full h-full overflow-hidden" unoptimized />
-					</div>
-				</Link>
 			</div>
 		</div>
 	)

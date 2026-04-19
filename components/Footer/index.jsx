@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { FiExternalLink } from "react-icons/fi";
 
 
 export function Footer() {
@@ -20,26 +19,6 @@ export function Footer() {
 							Fix it yourself!
 						</Link>
 					</h1>
-				</div>
-
-				<div className="flex gap-1 justify-center items-center text-xl max-xl:text-sm text-nowrap flex-nowrap">
-					<h1 className="text-light_text flex justify-center items-center gap-1 text-wrap flex-wrap">
-						<div className="flex gap-1">
-							Website built using open source
-							<Link href={"https://nextjs.org/"} target={"_blank"} className="text-white underline flex gap-1 justify-center items-center cursor-pointer hover:text-accent transition-all duration-200">
-								NextJS
-								<FiExternalLink className="text-light_text" />
-							</Link>
-						</div>
-						<div className="flex gap-1">
-							by
-							<Link href={"https://www.linkedin.com/in/wiktor-wiejak"} className="text-white underline flex gap-1 justify-center items-center cursor-pointer hover:text-accent transition-all duration-200">
-								Wiktor Wiejak
-							</Link>
-						</div>
-
-					</h1>
-
 				</div>
 			</div>
 
