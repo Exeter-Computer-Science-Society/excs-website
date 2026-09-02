@@ -35,3 +35,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Agent worktrees. EnterWorktree creates these under .claude/worktrees/ — whole
+# checkouts, node_modules and all. Never commit one into the tree. Deliberately
+# narrow so .claude/settings.json (the checked-in shipping grants) still tracks.
+.claude/worktrees/
+.claude/settings.local.json
