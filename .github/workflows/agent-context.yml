@@ -1,0 +1,17 @@
+name: Agent context
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  instructions:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Validate portable agent instructions
+        run: python3 scripts/check_agent_context.py
