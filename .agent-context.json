@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "project": "excs-website",
+  "development_base": "main",
+  "is_template": false,
+  "required_files": [
+    ".claude/settings.json"
+  ],
+  "optional_private_paths": [
+    "local/infrastructure.md",
+    "local/deployments.md"
+  ],
+  "rule_checks": []
+}
