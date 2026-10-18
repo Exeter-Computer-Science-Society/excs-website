@@ -1,6 +1,6 @@
 [
     {
-        "name": "Piran",
+        "name": "Piran Trevenna",
         "position": "President",
         "description": "",
         "image": "images/people/placeholder.svg",
@@ -21,7 +21,7 @@
         "links": []
     },
     {
-        "name": "Sholto",
+        "name": "Sholto Coulter",
         "position": "Academic Director",
         "description": "",
         "image": "images/people/placeholder.svg",
@@ -35,11 +35,20 @@
         "links": []
     },
     {
-        "name": "Kazybek",
+        "name": "Kazybek Khairulla",
         "position": "Hackathon Director",
         "description": "",
-        "image": "images/people/placeholder.svg",
-        "links": []
+        "image": "images/people/kazybek.jpeg",
+        "links": [
+            {
+                "type": "linkedin",
+                "url": "https://www.linkedin.com/in/kazybek-khairulla"
+            },
+            {
+                "type": "github",
+                "url": "https://github.com/Kazybekkh"
+            }
+        ]
     },
     {
         "name": "Oliver San-Blas",
