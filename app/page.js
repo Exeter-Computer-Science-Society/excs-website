@@ -8,6 +8,7 @@ import { Footer } from "@/components/Footer";
 import { Committee } from "@/components/Committee";
 import { FlyingTriangles } from "@/components/FlyingTriangles";
 import { NewList } from "@/components/NewList";
+import { ExeHacksToast } from "@/components/ExeHacksToast";
 
 // icons
 import { IoMdArrowDropright } from "react-icons/io";
@@ -43,12 +44,14 @@ export default function Home() {
 	return (
 		<div className="w-screen h-full pt-32 pl-[var(--page-padding-left)] pr-[var(--page-padding-right)]">
 
+			<ExeHacksToast />
+
 			{/* Heading */}
-			<div className="relative w-full min-h-screen flex flex-col justify-center items-center gap-14 pb-16 animate-[backgroundEnter_3s_forwards_0.1s]">
+			<div className="w-full h-screen flex flex-col justify-center items-center gap-20 pb-20 animate-[backgroundEnter_3s_forwards_0.1s]">
 
 				<FlyingTriangles />
 
-				<svg width="0" height="0" className="absolute" aria-hidden="true" focusable="false">
+				<svg width="0" height="0" className="absolute w-0 h-0" aria-hidden="true" focusable="false">
 					<filter id="hero-glitch-green" colorInterpolationFilters="sRGB">
 						<feColorMatrix
 							type="matrix"
@@ -63,7 +66,7 @@ export default function Home() {
 					</filter>
 				</svg>
 
-				<div className="w-full flex flex-col justify-center items-center gap-12 animate-[infoEnter_1s_forwards_0.1s]">
+				<div className="w-full h-screen flex flex-col justify-center items-center gap-12 pb-72 animate-[infoEnter_1s_forwards_0.1s]">
 					<Link href={"https://www.exeter.ac.uk/"} target="_blank" className="hero-glitch-pill w-fit h-fit border border-light_text flex gap-8 bg-primary justify-center items-center p-4 z-40 cursor-pointer hover:scale-105 hover:border-white transition-all duration-200 rounded-lg">
 						<Image src="images/icons/exeter-no-bg.png" width={50} height={50} alt={"logig"} className="bg-white rounded-full" unoptimized />
 						<h1 className="hero-glitch-text text-light_text text-3xl max-xl:text-xl font-extrabold hover:text-white transition-all duration-200">
@@ -83,35 +86,6 @@ export default function Home() {
 						</div>
 					</div>
 				</div>
-
-				<section aria-label="ExeHacks 2027" className="relative z-40 w-full max-w-5xl animate-[infoEnter_1s_forwards_0.1s]">
-					<div className="rounded-xl shadow-[4px_4px_0_0_#A855F7]">
-						<div className="flex w-full flex-col overflow-hidden rounded-xl border border-secondary bg-primary md:flex-row">
-							<div className="h-44 w-full shrink-0 overflow-hidden md:h-56 md:w-3/5">
-								<Image
-									src="images/exehacks-2027-hero.png"
-									width={1920}
-									height={1080}
-									alt="ExeHacks poster. Pixel text reads .EXEHACKS, 24H, 6-7 Feb 2027, Exeter, and Build something that shouldn't exist yet."
-									className="h-full w-full object-cover object-center"
-									unoptimized
-								/>
-							</div>
-							<div className="flex flex-col justify-center gap-2 p-6 md:w-2/5 md:p-8">
-								<p className="text-sm font-bold tracking-wide text-[#4ADE80]">24-hour hackathon</p>
-								<h2 className="text-3xl font-extrabold text-white max-xl:text-2xl">ExeHacks 2027</h2>
-								<p className="text-lg font-medium text-light_text max-xl:text-base">6-7 Feb 2027, Innovation Centre, Exeter</p>
-								<Link
-									href="https://exehacks.excs.uk"
-									target="_blank"
-									className="mt-3 w-fit rounded-lg bg-[#4ADE80] px-5 py-2.5 text-base font-extrabold text-[#141414] shadow-[4px_4px_0_0_#A855F7] transition-transform duration-200 hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-[2px_2px_0_0_#A855F7] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#A855F7]"
-								>
-									Visit ExeHacks
-								</Link>
-							</div>
-						</div>
-					</div>
-				</section>
 			</div>
 
 			{/* about */}
