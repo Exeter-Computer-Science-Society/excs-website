@@ -21,11 +21,11 @@
 		"link": "/events"
 	},
 	{
-		"name": "Hack South West",
-		"description": "Our inter-uni Hackathon. Compete with a team for a prize!",
-		"footnote": "Exeter . Bristol . Bath . Cardiff . Plymouth",
-		"image": "images/hack-sw-og-bg.png",
-		"link": "https://hack-sw-2--hackathon-website-c451a.europe-west4.hosted.app/"
+		"name": "ExeHacks 2027",
+		"description": "6 to 7 February 2027 at the Innovation Centre, Exeter.",
+		"footnote": "exehacks.excs.uk",
+		"image": "images/exehacks-2027.png",
+		"link": "https://exehacks.excs.uk"
 	},
 	{
 		"name": "Feature Your Personal Project",
