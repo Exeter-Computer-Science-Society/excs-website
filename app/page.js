@@ -8,6 +8,7 @@ import { Footer } from "@/components/Footer";
 import { Committee } from "@/components/Committee";
 import { FlyingTriangles } from "@/components/FlyingTriangles";
 import { NewList } from "@/components/NewList";
+import { ExeHacksToast } from "@/components/ExeHacksToast";
 
 // icons
 import { IoMdArrowDropright } from "react-icons/io";
@@ -15,26 +16,74 @@ import { IoMdArrowDropright } from "react-icons/io";
 // data
 import data from "@/data/committee.json";
 
+const HERO_WORDMARK = [
+	["images/icons/computer-s-s.svg", "Computer"],
+	["images/icons/c-science-s.svg", "Science"],
+	["images/icons/c-s-society.svg", "Society"],
+];
+
+function HeroWordmark({ decorative = false }) {
+	return (
+		<div className="flex justify-center gap-8 w-full" aria-hidden={decorative ? "true" : undefined}>
+			{HERO_WORDMARK.map(([src, alt]) => (
+				<Image
+					key={src}
+					src={src}
+					width={400}
+					height={100}
+					alt={decorative ? "" : alt}
+					className="w-1/4"
+					unoptimized
+				/>
+			))}
+		</div>
+	);
+}
 
 export default function Home() {
 	return (
 		<div className="w-screen h-full pt-32 pl-[var(--page-padding-left)] pr-[var(--page-padding-right)]">
+
+			<ExeHacksToast />
 
 			{/* Heading */}
 			<div className="w-full h-screen flex flex-col justify-center items-center gap-20 pb-20 animate-[backgroundEnter_3s_forwards_0.1s]">
 
 				<FlyingTriangles />
 
+				<svg width="0" height="0" className="absolute w-0 h-0" aria-hidden="true" focusable="false">
+					<filter id="hero-glitch-green" colorInterpolationFilters="sRGB">
+						<feColorMatrix
+							type="matrix"
+							values="0 0 0 0 0.2902  0 0 0 0 0.8706  0 0 0 0 0.5020  0 0 0 1 0"
+						/>
+					</filter>
+					<filter id="hero-glitch-purple" colorInterpolationFilters="sRGB">
+						<feColorMatrix
+							type="matrix"
+							values="0 0 0 0 0.6588  0 0 0 0 0.3333  0 0 0 0 0.9686  0 0 0 1 0"
+						/>
+					</filter>
+				</svg>
+
 				<div className="w-full h-screen flex flex-col justify-center items-center gap-12 pb-72 animate-[infoEnter_1s_forwards_0.1s]">
-					<Link href={"https://www.exeter.ac.uk/"} target="_blank" className="w-fit h-fit border border-light_text flex gap-8 bg-primary justify-center items-center p-4 z-40 cursor-pointer hover:scale-105 hover:border-white transition-all duration-200 rounded-lg">
+					<Link href={"https://www.exeter.ac.uk/"} target="_blank" className="hero-glitch-pill w-fit h-fit border border-light_text flex gap-8 bg-primary justify-center items-center p-4 z-40 cursor-pointer hover:scale-105 hover:border-white transition-all duration-200 rounded-lg">
 						<Image src="images/icons/exeter-no-bg.png" width={50} height={50} alt={"logig"} className="bg-white rounded-full" unoptimized />
-						<h1 className="text-light_text text-3xl max-xl:text-xl font-extrabold hover:text-white transition-all duration-200">University of Exeter</h1>
+						<h1 className="hero-glitch-text text-light_text text-3xl max-xl:text-xl font-extrabold hover:text-white transition-all duration-200">
+							<span>University of Exeter</span>
+							<span className="hero-glitch-text__slice hero-glitch-text__slice--green" aria-hidden="true">University of Exeter</span>
+							<span className="hero-glitch-text__slice hero-glitch-text__slice--purple" aria-hidden="true">University of Exeter</span>
+						</h1>
 					</Link>
 
-					<div className="flex justify-center gap-8 w-full">
-						<Image src="images/icons/computer-s-s.svg" width={400} height={100} alt="s" className="w-1/4" unoptimized />
-						<Image src="images/icons/c-science-s.svg" width={400} height={100} alt="s" className="w-1/4" unoptimized />
-						<Image src="images/icons/c-s-society.svg" width={400} height={100} alt="s" className="w-1/4" unoptimized />
+					<div className="hero-glitch-mark">
+						<HeroWordmark />
+						<div className="hero-glitch-mark__layer hero-glitch-mark__layer--green" aria-hidden="true">
+							<HeroWordmark decorative />
+						</div>
+						<div className="hero-glitch-mark__layer hero-glitch-mark__layer--purple" aria-hidden="true">
+							<HeroWordmark decorative />
+						</div>
 					</div>
 				</div>
 			</div>

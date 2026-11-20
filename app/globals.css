@@ -93,3 +93,382 @@ body::-webkit-scrollbar-thumb {
 body::-webkit-scrollbar-thumb:hover {
     background-color: var(--accent-colour);
 }
+
+/* Homepage hero glitch.
+   Short green and purple bursts every few seconds.
+   The original text stays put; only overlay slices shift. */
+.hero-glitch-pill {
+    animation: hero-glitch-pill 6.5s infinite linear;
+}
+
+.hero-glitch-text {
+    position: relative;
+}
+
+.hero-glitch-text__slice {
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: transparent;
+    pointer-events: none;
+    opacity: 0;
+    white-space: nowrap;
+}
+
+.hero-glitch-text__slice--green {
+    text-shadow: -2px 0 #4ADE80;
+    animation: hero-glitch-text-green 6.5s infinite linear;
+}
+
+.hero-glitch-text__slice--purple {
+    text-shadow: 2px 0 #A855F7;
+    animation: hero-glitch-text-purple 6.5s infinite linear;
+}
+
+.hero-glitch-mark {
+    position: relative;
+    width: 100%;
+}
+
+.hero-glitch-mark__layer {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.hero-glitch-mark__layer--green {
+    animation: hero-glitch-slice-green 6.5s infinite linear;
+}
+
+.hero-glitch-mark__layer--green img {
+    filter: url("#hero-glitch-green");
+}
+
+.hero-glitch-mark__layer--purple {
+    animation: hero-glitch-slice-purple 6.5s infinite linear;
+}
+
+.hero-glitch-mark__layer--purple img {
+    filter: url("#hero-glitch-purple");
+}
+
+@keyframes hero-glitch-pill {
+    0%,
+    82%,
+    89.5%,
+    100% {
+        filter: none;
+    }
+    82.2%,
+    84% {
+        filter: drop-shadow(-2px 0 #4ADE80) drop-shadow(2px 0 #A855F7);
+    }
+    84.2%,
+    86.2% {
+        filter: drop-shadow(3px 0 #A855F7) drop-shadow(-2px 0 #4ADE80);
+    }
+    86.4%,
+    89.2% {
+        filter: drop-shadow(-3px 0 #4ADE80) drop-shadow(1px 0 #A855F7);
+    }
+}
+
+@keyframes hero-glitch-text-green {
+    0%,
+    82%,
+    90%,
+    100% {
+        opacity: 0;
+        transform: translate3d(0, 0, 0);
+        clip-path: inset(0 0 100% 0);
+    }
+    82.2%,
+    84.2% {
+        opacity: 0.95;
+        transform: translate3d(-2px, 0, 0);
+        clip-path: inset(4% 0 64% 0);
+    }
+    84.4%,
+    86.6% {
+        opacity: 0.9;
+        transform: translate3d(2px, -1px, 0);
+        clip-path: inset(36% 0 30% 0);
+    }
+    86.8%,
+    89.6% {
+        opacity: 0.85;
+        transform: translate3d(-1px, 1px, 0);
+        clip-path: inset(66% 0 6% 0);
+    }
+}
+
+@keyframes hero-glitch-text-purple {
+    0%,
+    82.6%,
+    90.4%,
+    100% {
+        opacity: 0;
+        transform: translate3d(0, 0, 0);
+        clip-path: inset(0 0 100% 0);
+    }
+    82.8%,
+    85% {
+        opacity: 0.95;
+        transform: translate3d(2px, 0, 0);
+        clip-path: inset(16% 0 50% 0);
+    }
+    85.2%,
+    87.4% {
+        opacity: 0.9;
+        transform: translate3d(-3px, 1px, 0);
+        clip-path: inset(50% 0 16% 0);
+    }
+    87.6%,
+    90% {
+        opacity: 0.8;
+        transform: translate3d(1px, 0, 0);
+        clip-path: inset(2% 0 74% 0);
+    }
+}
+
+@keyframes hero-glitch-slice-green {
+    0%,
+    82%,
+    90%,
+    100% {
+        opacity: 0;
+        transform: translate3d(0, 0, 0);
+        clip-path: inset(0 0 100% 0);
+    }
+    82.2%,
+    84.2% {
+        opacity: 0.9;
+        transform: translate3d(-3px, 0, 0);
+        clip-path: inset(8% 0 62% 0);
+    }
+    84.4%,
+    86.6% {
+        opacity: 0.85;
+        transform: translate3d(3px, 0, 0);
+        clip-path: inset(40% 0 28% 0);
+    }
+    86.8%,
+    89.6% {
+        opacity: 0.8;
+        transform: translate3d(-2px, 1px, 0);
+        clip-path: inset(68% 0 6% 0);
+    }
+}
+
+@keyframes hero-glitch-slice-purple {
+    0%,
+    82.6%,
+    90.4%,
+    100% {
+        opacity: 0;
+        transform: translate3d(0, 0, 0);
+        clip-path: inset(0 0 100% 0);
+    }
+    82.8%,
+    85% {
+        opacity: 0.9;
+        transform: translate3d(3px, 0, 0);
+        clip-path: inset(20% 0 48% 0);
+    }
+    85.2%,
+    87.4% {
+        opacity: 0.85;
+        transform: translate3d(-4px, 0, 0);
+        clip-path: inset(52% 0 14% 0);
+    }
+    87.6%,
+    90% {
+        opacity: 0.75;
+        transform: translate3d(2px, -1px, 0);
+        clip-path: inset(2% 0 76% 0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero-glitch-pill {
+        animation: none;
+        filter: none;
+    }
+
+    .hero-glitch-text__slice,
+    .hero-glitch-mark__layer {
+        animation: none;
+        opacity: 0;
+        clip-path: none;
+        transform: none;
+        filter: none;
+    }
+}
+
+/* ExeHacks toast: retro window, bottom-right.
+   On a narrow screen it sits along the bottom edge. */
+.exehacks-toast {
+    position: fixed;
+    z-index: 60;
+    right: 1.25rem;
+    bottom: max(1.25rem, env(safe-area-inset-bottom));
+    width: 22.5rem;
+    max-width: calc(100vw - 2rem);
+    display: flex;
+    flex-direction: column;
+    background: var(--primary-colour);
+    color: var(--text-middle-colour);
+    border: 1px solid #4ADE80;
+    border-radius: 2px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+    overflow: hidden;
+}
+
+.exehacks-toast--enter {
+    animation:
+        exehacks-toast-in 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards,
+        exehacks-toast-glitch 0.42s linear 0.5s forwards;
+}
+
+.exehacks-toast__bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    min-height: 2rem;
+    padding: 0.4rem 0.45rem 0.4rem 0.7rem;
+    background: #A855F7;
+    color: #141414;
+}
+
+.exehacks-toast__title {
+    margin: 0;
+    font-size: 11px;
+    line-height: 1.35;
+    letter-spacing: 0;
+}
+
+.exehacks-toast__close {
+    flex: none;
+    width: 1.6rem;
+    height: 1.6rem;
+    border: 1px solid #141414;
+    background: transparent;
+    color: #141414;
+    font: 700 13px/1 Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+
+.exehacks-toast__close:hover {
+    background: #141414;
+    color: #A855F7;
+}
+
+.exehacks-toast__close:focus-visible {
+    outline: 2px solid #141414;
+    outline-offset: 2px;
+}
+
+.exehacks-toast__body {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem;
+}
+
+.exehacks-toast__thumb {
+    width: 5.25rem;
+    height: 3.5rem;
+    flex: none;
+    object-fit: cover;
+    object-position: center;
+    border: 1px solid #4ADE80;
+}
+
+.exehacks-toast__copy {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.55rem;
+    min-width: 0;
+}
+
+.exehacks-toast__copy p {
+    margin: 0;
+    color: var(--text-middle-colour);
+    font-size: 0.95rem;
+    font-weight: 700;
+    line-height: 1.35;
+}
+
+.exehacks-toast__cta {
+    display: inline-block;
+    padding: 0.4rem 0.65rem;
+    background: #4ADE80;
+    color: #141414;
+    font-size: 0.85rem;
+    font-weight: 800;
+    line-height: 1.2;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.exehacks-toast__cta:hover {
+    background: #86efac;
+}
+
+.exehacks-toast__cta:focus-visible {
+    outline: 2px solid #A855F7;
+    outline-offset: 2px;
+}
+
+@keyframes exehacks-toast-in {
+    from {
+        opacity: 0;
+        transform: translateY(calc(100% + 1.5rem));
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes exehacks-toast-glitch {
+    0%,
+    100% {
+        transform: translateY(0);
+        filter: none;
+    }
+    25% {
+        transform: translate(-2px, 0);
+        filter: drop-shadow(-2px 0 #4ADE80) drop-shadow(2px 0 #A855F7);
+    }
+    50% {
+        transform: translate(2px, 1px);
+        filter: drop-shadow(3px 0 #A855F7) drop-shadow(-2px 0 #4ADE80);
+    }
+    75% {
+        transform: translate(-1px, 0);
+        filter: drop-shadow(-3px 0 #4ADE80) drop-shadow(1px 0 #A855F7);
+    }
+}
+
+@media (max-width: 640px) {
+    .exehacks-toast {
+        left: 0.75rem;
+        right: 0.75rem;
+        bottom: max(0.75rem, env(safe-area-inset-bottom));
+        width: auto;
+        max-width: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .exehacks-toast--enter {
+        animation: none;
+        opacity: 1;
+        transform: none;
+        filter: none;
+    }
+}
