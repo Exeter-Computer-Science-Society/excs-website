@@ -22,9 +22,10 @@
 	},
 	{
 		"name": "ExeHacks 2027",
-		"description": "6 to 7 February 2027 at the Innovation Centre, Exeter.",
+		"description": "24-hour hackathon, 6 to 7 February 2027 at the Innovation Centre, Exeter.",
 		"footnote": "exehacks.excs.uk",
-		"image": "images/exehacks-2027.png",
+		"image": "images/exehacks-2027-hero.png",
+		"imageFit": "contain",
 		"link": "https://exehacks.excs.uk"
 	},
 	{
